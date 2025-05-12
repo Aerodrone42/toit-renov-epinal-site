@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 const HeroBanner = () => {
   return (
     <div className="relative bg-gray-900 h-[60vh] md:h-[70vh] flex items-center">
-      {/* Image de fond avec superposition */}
-      <div className="absolute inset-0 bg-black/50 z-0">
+      {/* Image de fond avec superposition plus visible */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img 
           src="/lovable-uploads/b89fcd9b-217c-47a7-8722-43a58454d8e1.png" 
           alt="Camion RÉNOVATION TECHNI TOIT" 
@@ -15,7 +16,7 @@ const HeroBanner = () => {
       </div>
       
       {/* Contenu */}
-      <div className="container-custom relative z-10 text-white">
+      <div className="container-custom relative z-20 text-white">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
             Expert en rénovation de toiture dans les Vosges
@@ -35,7 +36,7 @@ const HeroBanner = () => {
           </div>
           
           {/* Badge assurance */}
-          <div className="mt-8 inline-block bg-black/30 backdrop-blur-sm px-4 py-2 rounded-md">
+          <div className="mt-8 inline-block bg-black/50 backdrop-blur-sm px-4 py-2 rounded-md">
             <p className="flex items-center text-white font-medium">
               <span className="bg-roofing-red p-1 rounded-full mr-2 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
