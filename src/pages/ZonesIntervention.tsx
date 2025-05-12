@@ -132,8 +132,8 @@ const ZonesIntervention = () => {
       <Header />
 
       <main>
-        {/* Hero Section */}
-        <div className="bg-roofing-anthracite py-12">
+        {/* Hero Section - ajout de padding-top pour créer plus d'espace */}
+        <div className="bg-roofing-anthracite py-12 pt-32">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Zones d'intervention</h1>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
