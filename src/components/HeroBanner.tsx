@@ -6,11 +6,11 @@ const HeroBanner = () => {
   return (
     <div className="relative bg-gray-900 h-[60vh] md:h-[70vh] flex items-center">
       {/* Image de fond avec superposition */}
-      <div className="absolute inset-0 bg-black/60 z-0">
+      <div className="absolute inset-0 bg-black/40 z-0">
         <img 
-          src="/hero-background.jpg" 
-          alt="Toiture en rénovation" 
-          className="w-full h-full object-cover mix-blend-overlay"
+          src="/lovable-uploads/b89fcd9b-217c-47a7-8722-43a58454d8e1.png" 
+          alt="Camion RÉNOVATION TECHNI TOIT" 
+          className="w-full h-full object-cover object-center"
         />
       </div>
       
