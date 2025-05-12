@@ -1,12 +1,40 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const PeintureBoiserie = () => {
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/62add123-cfcb-48ec-bdff-d3e37feaa2b4.png",
+      alt: "Pinceau et peinture verte",
+      description: "Préparation de peinture écologique pour boiserie extérieure"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/a0f17cc6-7235-4096-8847-0b1ec900dc57.png",
+      alt: "Application de vernis sur boiserie",
+      description: "Application de vernis protecteur sur bardage bois"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/581c064c-f47b-43c3-aef2-961b1c7d206f.png",
+      alt: "Bardage bois extérieur",
+      description: "Bardage bois après traitement et protection"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/6ea5183e-5767-4638-8781-f8c0c85b062f.png",
+      alt: "Application de vernis sur terrasse",
+      description: "Entretien et protection d'une terrasse en bois"
+    }
+  ];
+
   return (
     <ServicePage
       title="Peinture & Boiserie"
       description="Services de peinture extérieure et traitement de boiseries à Épinal et dans les Vosges. Protection et embellissement de vos extérieurs."
-      keywords="peinture boiserie Épinal, traitement bois extérieur Vosges, peinture extérieure maison, rénovation boiseries"
+      keywords="peinture boiserie Épinal, traitement bois extérieur Vosges, peinture extérieure maison, rénovation boiseries, boiserie PVC, rénovation dessous de toits"
       heroImage="/service-peinture.jpg"
       content={
         <>
@@ -31,6 +59,12 @@ const PeintureBoiserie = () => {
             <li>Pergolas et carports</li>
             <li>Clôtures et portails</li>
           </ul>
+          
+          <h2>Galerie de nos réalisations</h2>
+          
+          <div className="my-8">
+            <Gallery images={galleryImages} className="grid-cols-1 md:grid-cols-2" />
+          </div>
           
           <h2>Notre processus de travail</h2>
           
@@ -85,6 +119,10 @@ const PeintureBoiserie = () => {
         {
           title: "Rénovation de toiture",
           url: "/services/renovation-toiture"
+        },
+        {
+          title: "Dessous de Toit en PVC",
+          url: "/services/dessous-de-toit"
         }
       ]}
     />
