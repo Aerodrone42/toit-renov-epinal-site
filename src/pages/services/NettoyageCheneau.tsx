@@ -1,7 +1,36 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const NettoyageCheneau = () => {
+  // Images pour la galerie
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/0866c2b1-eff7-4c74-b8a8-516e683e062f.png",
+      alt: "Nettoyage de chéneau avec un jet haute pression",
+      description: "Nettoyage professionnel d'une gouttière à l'aide d'un nettoyeur haute pression"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/109faa75-ad69-4f1b-ba17-22bb476520ae.png",
+      alt: "Gouttière remplie de feuilles d'automne",
+      description: "Accumulation de feuilles mortes dans une gouttière - cause fréquente d'obstruction"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/48310da9-b483-49f2-921f-52294bbc99c9.png",
+      alt: "Installation de chéneau en zinc sur toiture",
+      description: "Chéneau en zinc neuf installé le long d'une toiture en tuiles"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/d13ae934-c632-4622-a1f6-56f007a29fb2.png",
+      alt: "Descente de gouttière obstruée",
+      description: "Exemple de descente de gouttière bouchée par des débris - nécessitant un débouchage"
+    }
+  ];
+
   return (
     <ServicePage
       title="Nettoyage de Chéneau"
@@ -16,6 +45,12 @@ const NettoyageCheneau = () => {
             et les dommages à votre habitation. RÉNOVATION TECHNI TOIT vous propose un service professionnel 
             de nettoyage et entretien de vos chéneaux.
           </p>
+          
+          {/* Ajout de la galerie de photos */}
+          <div className="my-8">
+            <h2 className="text-2xl font-bold mb-6">Nos interventions</h2>
+            <Gallery images={galleryImages} />
+          </div>
           
           <h2>Pourquoi nettoyer régulièrement vos chéneaux ?</h2>
           
