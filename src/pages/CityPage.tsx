@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import { Gallery } from "@/components/Gallery";
 import { ArrowLeft, Phone, Mail } from "lucide-react";
 
 interface CityPageProps {
@@ -11,6 +12,34 @@ interface CityPageProps {
   surroundingCities: string[];
   imageUrl?: string;
 }
+
+// Images du portfolio pour toutes les sous-pages secteurs
+const portfolioImages = [
+  {
+    id: 1,
+    src: "/lovable-uploads/124b6f79-06cd-4ad1-a2e2-0ebce63c4ade.png",
+    alt: "Rénovation de toiture en tuiles",
+    description: "Rénovation complète d'une toiture en tuiles mécaniques"
+  },
+  {
+    id: 2,
+    src: "/lovable-uploads/5f58adb2-b562-4aa7-8dbe-582e1a8dcc85.png",
+    alt: "Toiture rénovée avec fenêtres de toit",
+    description: "Installation de fenêtres de toit Velux sur une toiture rénovée"
+  },
+  {
+    id: 3,
+    src: "/lovable-uploads/e71d4c44-b7f8-4bae-9ba6-480023d73528.png",
+    alt: "Toiture neuve en tuiles",
+    description: "Toiture entièrement rénovée avec tuiles en terre cuite"
+  },
+  {
+    id: 4,
+    src: "/lovable-uploads/90b385dd-f5d7-44b5-9741-dbd851212d22.png",
+    alt: "Rénovation de toiture en cours",
+    description: "Installation d'écran sous toiture et lattage pour nouvelle couverture"
+  }
+];
 
 const CityPage = ({ mainCity, surroundingCities, imageUrl = "/service-peinture.jpg" }: CityPageProps) => {
   // Formatage pour les URLs
@@ -38,7 +67,7 @@ const CityPage = ({ mainCity, surroundingCities, imageUrl = "/service-peinture.j
       <main>
         {/* Hero Section */}
         <div 
-          className="bg-roofing-anthracite py-16 bg-cover bg-center" 
+          className="bg-roofing-anthracite py-16 pt-32 bg-cover bg-center" 
           style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('${imageUrl}')` }}
         >
           <div className="container-custom text-center">
@@ -86,6 +115,32 @@ const CityPage = ({ mainCity, surroundingCities, imageUrl = "/service-peinture.j
               <p className="italic text-gray-600">
                 Et dans toutes les communes environnantes dans un rayon de 50km autour d'Épinal.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Portfolio des réalisations */}
+        <section className="py-12 bg-gray-100">
+          <div className="container-custom max-w-4xl">
+            <h2 className="text-3xl font-bold mb-8 text-center">Nos réalisations à {mainCity} et alentours</h2>
+            
+            <p className="text-lg text-center mb-8">
+              Découvrez quelques exemples de nos travaux de rénovation de toiture, démoussage, 
+              et autres services réalisés à {mainCity} et dans les communes voisines.
+            </p>
+            
+            <Gallery images={portfolioImages} className="grid-cols-1 md:grid-cols-2 gap-6" />
+            
+            <div className="mt-8 text-center">
+              <Link 
+                to="/realisations" 
+                className="inline-flex items-center text-roofing-red hover:text-roofing-anthracite font-medium"
+              >
+                Voir toutes nos réalisations
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
