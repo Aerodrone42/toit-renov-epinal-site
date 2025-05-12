@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 import { House, Wrench, Mail, Image, Phone, MapPin, ChevronDown, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,6 +28,18 @@ const Header = () => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
   };
+
+  // Liste des services pour éviter la répétition
+  const serviceLinks = [
+    { path: "/services/demoussage-nettoyage-toiture", label: "Démoussage & Nettoyage toiture" },
+    { path: "/services/peinture-boiserie", label: "Peinture / Boiserie" },
+    { path: "/services/ravalement-facade", label: "Ravalement de façade" },
+    { path: "/services/renovation-toiture", label: "Rénovation de toiture" },
+    { path: "/services/changement-toiture", label: "Changement de toiture" },
+    { path: "/services/nettoyage-cheneau", label: "Nettoyage de chéneau" },
+    { path: "/services/reparations-diverses", label: "Réparations diverses" },
+    { path: "/services/charpente", label: "Charpente" },
+  ];
 
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -69,43 +87,25 @@ const Header = () => {
               Accueil
             </Link>
             
-            <div className="relative group">
-              <button 
-                className="nav-link flex items-center" 
-                onClick={toggleServices}
-              >
-                <Wrench size={18} className="mr-1" />
-                Nos Services
-                <ChevronDown size={16} className="ml-1" />
-              </button>
-
-              <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md overflow-hidden hidden group-hover:block">
-                <Link to="/services/demoussage-nettoyage-toiture" className="block px-4 py-2 hover:bg-gray-100">
-                  Démoussage & Nettoyage toiture
-                </Link>
-                <Link to="/services/peinture-boiserie" className="block px-4 py-2 hover:bg-gray-100">
-                  Peinture / Boiserie
-                </Link>
-                <Link to="/services/ravalement-facade" className="block px-4 py-2 hover:bg-gray-100">
-                  Ravalement de façade
-                </Link>
-                <Link to="/services/renovation-toiture" className="block px-4 py-2 hover:bg-gray-100">
-                  Rénovation de toiture
-                </Link>
-                <Link to="/services/changement-toiture" className="block px-4 py-2 hover:bg-gray-100">
-                  Changement de toiture
-                </Link>
-                <Link to="/services/nettoyage-cheneau" className="block px-4 py-2 hover:bg-gray-100">
-                  Nettoyage de chéneau
-                </Link>
-                <Link to="/services/reparations-diverses" className="block px-4 py-2 hover:bg-gray-100">
-                  Réparations diverses
-                </Link>
-                <Link to="/services/charpente" className="block px-4 py-2 hover:bg-gray-100">
-                  Charpente
-                </Link>
-              </div>
-            </div>
+            {/* Menu déroulant des services utilisant DropdownMenu */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild className="focus:outline-none">
+                <button className="nav-link flex items-center">
+                  <Wrench size={18} className="mr-1" />
+                  Nos Services
+                  <ChevronDown size={16} className="ml-1" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-white" align="start" sideOffset={15}>
+                {serviceLinks.map((service) => (
+                  <DropdownMenuItem key={service.path} asChild className="hover:bg-gray-100 cursor-pointer">
+                    <Link to={service.path} className="w-full py-2">
+                      {service.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             
             <Link to="/realisations" className="nav-link flex items-center">
               <Image size={18} className="mr-1" />
@@ -149,30 +149,16 @@ const Header = () => {
             
             {isServicesOpen && (
               <div className="pl-8 flex flex-col space-y-4 mt-4">
-                <Link to="/services/demoussage-nettoyage-toiture" className="py-1" onClick={closeMenu}>
-                  Démoussage & Nettoyage toiture
-                </Link>
-                <Link to="/services/peinture-boiserie" className="py-1" onClick={closeMenu}>
-                  Peinture / Boiserie
-                </Link>
-                <Link to="/services/ravalement-facade" className="py-1" onClick={closeMenu}>
-                  Ravalement de façade
-                </Link>
-                <Link to="/services/renovation-toiture" className="py-1" onClick={closeMenu}>
-                  Rénovation de toiture
-                </Link>
-                <Link to="/services/changement-toiture" className="py-1" onClick={closeMenu}>
-                  Changement de toiture
-                </Link>
-                <Link to="/services/nettoyage-cheneau" className="py-1" onClick={closeMenu}>
-                  Nettoyage de chéneau
-                </Link>
-                <Link to="/services/reparations-diverses" className="py-1" onClick={closeMenu}>
-                  Réparations diverses
-                </Link>
-                <Link to="/services/charpente" className="py-1" onClick={closeMenu}>
-                  Charpente
-                </Link>
+                {serviceLinks.map((service) => (
+                  <Link 
+                    key={service.path}
+                    to={service.path} 
+                    className="py-1" 
+                    onClick={closeMenu}
+                  >
+                    {service.label}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
