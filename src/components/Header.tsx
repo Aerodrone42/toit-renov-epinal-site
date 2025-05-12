@@ -1,8 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { useMediaQuery } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 import {
   NavigationMenu,
@@ -74,7 +73,7 @@ const Header = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useIsMobile();
 
   // Gestion du scroll pour changer l'apparence du header
   useEffect(() => {
