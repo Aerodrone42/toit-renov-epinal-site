@@ -1,4 +1,3 @@
-
 import ServicePage from "@/pages/ServicePage";
 import { Gallery } from "@/components/Gallery";
 
@@ -6,30 +5,30 @@ const DessousDeToit = () => {
   const dessousToitImages = [
     {
       id: 1,
-      src: "/lovable-uploads/3c534ef2-f5fc-4793-b0a9-0be15a22f2a0.png",
+      src: "/lovable-uploads/069254d6-214a-4556-910f-779a369f9522.png",
       alt: "Installation de dessous de toit en PVC",
-      description: "Pose professionnelle de dessous de toit en PVC blanc"
+      description: "Vue en contre-plongée de dessous de toit en PVC avec gouttière"
     },
     {
       id: 2,
-      src: "/lovable-uploads/9cace31b-af24-4a82-ba1e-2a4e4319a027.png",
-      alt: "Détail de finition dessous de toit",
-      description: "Finition soignée des dessous de toit avec corniche"
+      src: "/lovable-uploads/dc603128-f420-4f23-a692-95446f5eedb3.png",
+      alt: "Finition dessous de toit en PVC",
+      description: "Dessous de toit en PVC beige avec bordure foncée"
     }
   ];
   
   const avantApresImages = [
     {
       id: 3,
-      src: "/lovable-uploads/b59f52be-dc5d-4494-94ab-0255681217ac.png",
-      alt: "Avant rénovation des dessous de toit",
-      description: "État de dessous de toit avant rénovation"
+      src: "/lovable-uploads/bc783c0c-bfe8-40e6-8157-91974edbc8f5.png",
+      alt: "Détail de dessous de toit noir",
+      description: "Dessous de toit en PVC noir installé sur une habitation"
     },
     {
       id: 4,
-      src: "/lovable-uploads/b89fcd9b-217c-47a7-8722-43a58454d8e1.png",
-      alt: "Après rénovation des dessous de toit en PVC",
-      description: "Résultat après rénovation avec PVC blanc"
+      src: "/lovable-uploads/0e0aa54a-97df-4027-89bd-fd4243c3046c.png",
+      alt: "Vue d'ensemble dessous de toit",
+      description: "Maison avec dessous de toit et gouttières nouvellement installés"
     }
   ];
   
