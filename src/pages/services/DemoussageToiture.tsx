@@ -1,7 +1,38 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const DemoussageToiture = () => {
+  const beforeAfterImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/cab8e75d-f56b-4872-a981-ea06cd3c5e5c.png",
+      alt: "Démonstration de démoussage avant/après - moitié de toiture nettoyée",
+      description: "Avant/après : Impact visible du traitement de démoussage sur les tuiles"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/789b04e7-5d6c-4f00-ab64-cec795e87560.png",
+      alt: "Contraste entre tuiles nettoyées et toiture avec mousse",
+      description: "Résultat saisissant du nettoyage professionnel de toiture"
+    }
+  ];
+  
+  const equipmentImages = [
+    {
+      id: 3,
+      src: "/lovable-uploads/4464ece2-75b1-4b8f-ac36-41f1bd807eb3.png",
+      alt: "Équipement de nettoyage de toiture",
+      description: "Notre équipement professionnel pour le traitement des toitures"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/338cf9e1-9eae-49ca-928e-6a0a4e13fd56.png",
+      alt: "Matériel technique pour le démoussage",
+      description: "Matériel spécialisé pour un traitement efficace"
+    }
+  ];
+  
   return (
     <ServicePage
       title="Démoussage & Nettoyage Toiture"
@@ -15,6 +46,12 @@ const DemoussageToiture = () => {
             la durée de vie de votre couverture. À RÉNOVATION TECHNI TOIT, nous proposons un service complet d'entretien 
             de toiture pour les habitations dans la région d'Épinal et ses environs.
           </p>
+          
+          {/* Ajout de la galerie Avant/Après */}
+          <div className="my-8">
+            <h3 className="text-xl font-semibold mb-4">Avant/Après : L'efficacité de notre démoussage</h3>
+            <Gallery images={beforeAfterImages} />
+          </div>
           
           <h2>Pourquoi entretenir votre toiture ?</h2>
           
@@ -61,6 +98,12 @@ const DemoussageToiture = () => {
               et ralentit considérablement la formation future de mousses et lichens.
             </li>
           </ol>
+          
+          {/* Ajout de la galerie d'équipements */}
+          <div className="my-8">
+            <h3 className="text-xl font-semibold mb-4">Notre équipement professionnel</h3>
+            <Gallery images={equipmentImages} />
+          </div>
           
           <h2>Quand faire démoussser votre toiture ?</h2>
           
