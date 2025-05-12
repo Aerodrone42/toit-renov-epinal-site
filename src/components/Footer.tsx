@@ -57,6 +57,11 @@ const Footer = () => {
                   Nettoyage de chéneau
                 </Link>
               </li>
+              <li>
+                <Link to="/services/dessous-de-toit" className="text-gray-300 hover:text-roofing-red transition-colors">
+                  Dessous de Toit en PVC
+                </Link>
+              </li>
             </ul>
           </div>
           

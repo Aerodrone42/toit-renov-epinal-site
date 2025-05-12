@@ -19,6 +19,7 @@ import ChangementToiture from "./pages/services/ChangementToiture";
 import NettoyageCheneau from "./pages/services/NettoyageCheneau";
 import ReparationsDiverses from "./pages/services/ReparationsDiverses";
 import Charpente from "./pages/services/Charpente";
+import DessousDeToit from "./pages/services/DessousDeToit";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => (
           <Route path="/services/nettoyage-cheneau" element={<NettoyageCheneau />} />
           <Route path="/services/reparations-diverses" element={<ReparationsDiverses />} />
           <Route path="/services/charpente" element={<Charpente />} />
+          <Route path="/services/dessous-de-toit" element={<DessousDeToit />} />
           
           {/* Catch-all route pour les pages non trouvées */}
           <Route path="*" element={<NotFound />} />
