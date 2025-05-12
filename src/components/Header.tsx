@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -132,7 +133,8 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={cn(
-                  isScrolled ? 'text-gray-700 data-[state=open]:text-roofing-red' : 'text-white data-[state=open]:text-white/80',
+                  "bg-transparent",
+                  isScrolled ? 'text-gray-700 hover:text-roofing-red data-[state=open]:text-roofing-red' : 'text-white hover:text-white/80 data-[state=open]:text-white',
                   location.pathname.includes("/services/") && "font-semibold text-roofing-red"
                 )}>
                   Services
