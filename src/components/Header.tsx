@@ -66,6 +66,11 @@ const Header = () => {
         {/* Logo et Navigation */}
         <div className="flex justify-between items-center py-4">
           <Link to="/" className="flex items-center" onClick={closeMenu}>
+            <img 
+              src="/lovable-uploads/6405d24d-4938-452a-b21b-43c782556b25.png" 
+              alt="RÉNOVATION TECHNI TOIT" 
+              className="h-14 mr-3" 
+            />
             <div className="text-roofing-red font-bold text-xl md:text-2xl tracking-tight">
               RÉNOVATION<span className="text-roofing-anthracite"> TECHNI TOIT</span>
             </div>
@@ -130,6 +135,14 @@ const Header = () => {
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       )}>
         <nav className="flex flex-col space-y-6">
+          <div className="flex items-center mb-4">
+            <img 
+              src="/lovable-uploads/6405d24d-4938-452a-b21b-43c782556b25.png" 
+              alt="RÉNOVATION TECHNI TOIT" 
+              className="h-12 mr-2" 
+            />
+          </div>
+          
           <Link to="/" className="text-lg font-medium py-2 border-b border-gray-200" onClick={closeMenu}>
             <House size={20} className="inline-block mr-2" />
             Accueil
