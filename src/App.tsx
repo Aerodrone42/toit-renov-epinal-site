@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Contact from "./pages/Contact";
 import Realisations from "./pages/Realisations";
 import NotFound from "./pages/NotFound";
+import CallButton from "./components/CallButton";
 
 // Pages de service
 import DemoussageToiture from "./pages/services/DemoussageToiture";
@@ -26,6 +27,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <CallButton /> {/* Ajout du bouton d'appel flottant */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
