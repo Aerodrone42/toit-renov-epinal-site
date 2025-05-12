@@ -36,8 +36,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="flex items-center mb-4">
         <Icon size={36} className="text-roofing-red" />
       </div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600 mb-6 flex-grow">{description}</p>
+      <h3 className="text-xl font-bold mb-2 text-roofing-anthracite">{title}</h3>
+      <p className="text-gray-700 mb-6 flex-grow">{description}</p>
       <Link to={to}>
         <Button className="btn-secondary w-full">En savoir plus</Button>
       </Link>
