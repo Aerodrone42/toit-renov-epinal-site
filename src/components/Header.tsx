@@ -39,6 +39,7 @@ const Header = () => {
     { path: "/services/nettoyage-cheneau", label: "Nettoyage de chéneau" },
     { path: "/services/reparations-diverses", label: "Réparations diverses" },
     { path: "/services/charpente", label: "Charpente" },
+    { path: "/services/dessous-de-toit", label: "Dessous de Toit en PVC" },
   ];
 
   return (
