@@ -1,7 +1,36 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const ReparationsDiverses = () => {
+  // Images pour la galerie
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/7ed12729-5377-43e8-9499-492b97b9731d.png",
+      alt: "Réparation de toiture endommagée",
+      description: "Intervention sur une toiture en tuiles endommagée dans une zone rurale"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/d77c3f94-01f7-4bde-8e53-5634f3dc89d2.png",
+      alt: "Installation d'étanchéité sous toiture",
+      description: "Pose de membrane d'étanchéité et isolation lors d'une réparation de toiture"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/fccbf5db-05ea-4ff5-bfa4-3659b414efa2.png",
+      alt: "Installation de système de gouttière",
+      description: "Fixation de crochets de gouttière sur chevrons lors d'une réparation"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/5dc01771-6b5f-492b-8126-6c67276a727a.png",
+      alt: "Véhicule d'intervention RÉNOVATION TECHNI TOIT",
+      description: "Notre véhicule équipé pour les interventions de réparations diverses"
+    }
+  ];
+
   return (
     <ServicePage
       title="Réparations Diverses"
@@ -15,6 +44,12 @@ const ReparationsDiverses = () => {
             RÉNOVATION TECHNI TOIT vous propose un service réactif de réparations diverses pour tous les éléments 
             de votre toiture et de votre façade.
           </p>
+          
+          {/* Ajout de la galerie de photos */}
+          <div className="my-8">
+            <h2 className="text-2xl font-bold mb-6">Nos interventions</h2>
+            <Gallery images={galleryImages} />
+          </div>
           
           <h2>Nos services de réparation</h2>
           
