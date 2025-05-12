@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
@@ -120,6 +120,11 @@ const interventionAreas: { [key: string]: LocalArea[] } = {
 
 const ZonesIntervention = () => {
   const [activeTab, setActiveTab] = useState<string>("Centre Vosges");
+  
+  // Effet pour remonter la page en haut au chargement
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
