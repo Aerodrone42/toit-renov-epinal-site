@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import ZonesIntervention from "./pages/ZonesIntervention";
 import NotFound from "./pages/NotFound";
 import CallButton from "./components/CallButton";
+import Realisations from "./pages/Realisations";
 
 // Pages de service
 import DemoussageToiture from "./pages/services/DemoussageToiture";
@@ -59,6 +60,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
+          <Route path="/realisations" element={<Realisations />} />
           
           {/* Routes des services */}
           <Route path="/services/demoussage-nettoyage-toiture" element={<DemoussageToiture />} />

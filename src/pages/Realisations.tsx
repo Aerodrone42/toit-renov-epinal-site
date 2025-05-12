@@ -4,6 +4,7 @@ import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
+import { Gallery } from "@/components/Gallery";
 
 // Types pour les projets
 type ProjectCategory = 
@@ -12,7 +13,8 @@ type ProjectCategory =
   | "renovation" 
   | "facade" 
   | "peinture"
-  | "reparation";
+  | "dessous-toit"
+  | "cheneau";
 
 interface Project {
   id: number;
@@ -23,70 +25,77 @@ interface Project {
   description: string;
 }
 
-// Données des projets
-const projects: Project[] = [
+// Organisation des réalisations
+const portfolioImages = [
   {
     id: 1,
-    title: "Rénovation complète de toiture",
-    category: "renovation",
-    location: "Épinal",
-    imageUrl: "/realisation-1.jpg",
-    description: "Remplacement complet de la couverture et rénovation de la charpente pour cette maison à Épinal."
+    src: "/lovable-uploads/124b6f79-06cd-4ad1-a2e2-0ebce63c4ade.png",
+    alt: "Rénovation de toiture en tuiles",
+    description: "Rénovation complète d'une toiture en tuiles mécaniques à Épinal"
   },
   {
     id: 2,
-    title: "Démoussage de toiture",
-    category: "demoussage",
-    location: "Golbey",
-    imageUrl: "/realisation-2.jpg",
-    description: "Démoussage et traitement hydrofuge d'une toiture en tuiles."
+    src: "/lovable-uploads/5f58adb2-b562-4aa7-8dbe-582e1a8dcc85.png",
+    alt: "Toiture rénovée avec fenêtres de toit",
+    description: "Installation de fenêtres de toit Velux sur une toiture rénovée à Remiremont"
   },
   {
     id: 3,
-    title: "Ravalement de façade",
-    category: "facade",
-    location: "Thaon-les-Vosges",
-    imageUrl: "/realisation-3.jpg",
-    description: "Nettoyage et mise en peinture de la façade d'une maison individuelle."
+    src: "/lovable-uploads/e71d4c44-b7f8-4bae-9ba6-480023d73528.png",
+    alt: "Toiture neuve en tuiles",
+    description: "Toiture entièrement rénovée avec tuiles en terre cuite à Golbey"
   },
   {
     id: 4,
-    title: "Peinture des boiseries",
-    category: "peinture",
-    location: "Chantraine",
-    imageUrl: "/realisation-4.jpg",
-    description: "Traitement et peinture des boiseries extérieures."
+    src: "/lovable-uploads/90b385dd-f5d7-44b5-9741-dbd851212d22.png",
+    alt: "Rénovation de toiture en cours",
+    description: "Installation d'écran sous toiture et lattage pour nouvelle couverture à Charmes"
   },
   {
     id: 5,
-    title: "Réparation de chéneau",
-    category: "reparation",
-    location: "Dogneville",
-    imageUrl: "/realisation-5.jpg",
-    description: "Remplacement et réparation des chéneaux endommagés."
+    src: "/lovable-uploads/6db7eb81-4532-4ba1-9914-a5d6d5e88188.png",
+    alt: "Travaux d'isolation de toiture",
+    description: "Isolation thermique de toiture avec pose de tuiles neuves à Saint-Dié-des-Vosges"
   },
   {
     id: 6,
-    title: "Nettoyage de toiture",
-    category: "demoussage",
-    location: "Saint-Laurent",
-    imageUrl: "/realisation-6.jpg",
-    description: "Nettoyage haute pression et traitement anti-mousse d'une toiture."
+    src: "/lovable-uploads/aac92c15-7123-4ec0-bc57-5bf4e69fea09.png",
+    alt: "Rénovation complète de toiture avec échafaudage",
+    description: "Chantier de rénovation complète d'une toiture avec isolation à Mirecourt"
+  },
+  {
+    id: 7,
+    src: "/lovable-uploads/05a01fe4-d62e-42b1-8fa4-01394fa580f0.png",
+    alt: "Installation de crochets de gouttières",
+    description: "Installation de crochets de gouttière sur chevrons neufs à Thaon-les-Vosges"
+  },
+  {
+    id: 8,
+    src: "/lovable-uploads/eb8b4170-f585-4d06-a137-66f0b37fcd57.png", 
+    alt: "Nettoyage de chéneau avec jet haute pression",
+    description: "Nettoyage professionnel de gouttière à Rambervillers"
+  },
+  {
+    id: 9,
+    src: "/lovable-uploads/f2b8d3c7-7897-4a47-9a02-0e8fa7eb2082.png",
+    alt: "Installation de dessous de toit en PVC",
+    description: "Finition dessous de toit en PVC avec gouttière assortie à Bruyères"
+  },
+  {
+    id: 10,
+    src: "/lovable-uploads/8027faf2-4bcf-44e5-a370-168034dcb317.png",
+    alt: "Véhicule d'intervention RÉNOVATION TECHNI TOIT",
+    description: "Notre véhicule d'intervention équipé pour tous vos travaux de toiture"
   }
 ];
 
 const Realisations = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const filteredProjects = activeCategory === "all" 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
 
   return (
     <>
       <SEOHead
-        title="Nos Réalisations - Travaux de toiture et façade"
+        title="Nos Réalisations - RÉNOVATION TECHNI TOIT"
         description="Découvrez nos réalisations en matière de rénovation de toiture, démoussage, ravalement de façade et autres travaux dans les Vosges."
         keywords="réalisation toiture Épinal, travaux couvreur Vosges, photos démoussage toiture, rénovation façade avant après"
       />
@@ -95,7 +104,7 @@ const Realisations = () => {
 
       <main>
         {/* Hero Section */}
-        <div className="bg-roofing-anthracite py-12">
+        <div className="bg-roofing-anthracite py-12 pt-32">
           <div className="container-custom text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Nos Réalisations</h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
@@ -107,109 +116,28 @@ const Realisations = () => {
         {/* Galerie Section */}
         <section className="py-16">
           <div className="container-custom">
-            {/* Filtres */}
-            <div className="flex flex-wrap justify-center gap-2 mb-8">
-              <button 
-                onClick={() => setActiveCategory("all")}
-                className={`px-4 py-2 rounded-md ${activeCategory === "all" ? "bg-roofing-red text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-              >
-                Tous les projets
-              </button>
-              <button 
-                onClick={() => setActiveCategory("demoussage")}
-                className={`px-4 py-2 rounded-md ${activeCategory === "demoussage" ? "bg-roofing-red text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-              >
-                Démoussage
-              </button>
-              <button 
-                onClick={() => setActiveCategory("renovation")}
-                className={`px-4 py-2 rounded-md ${activeCategory === "renovation" ? "bg-roofing-red text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-              >
-                Rénovation
-              </button>
-              <button 
-                onClick={() => setActiveCategory("facade")}
-                className={`px-4 py-2 rounded-md ${activeCategory === "facade" ? "bg-roofing-red text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-              >
-                Façade
-              </button>
-              <button 
-                onClick={() => setActiveCategory("peinture")}
-                className={`px-4 py-2 rounded-md ${activeCategory === "peinture" ? "bg-roofing-red text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-              >
-                Peinture
-              </button>
-              <button 
-                onClick={() => setActiveCategory("reparation")}
-                className={`px-4 py-2 rounded-md ${activeCategory === "reparation" ? "bg-roofing-red text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
-              >
-                Réparations
-              </button>
+            <div className="max-w-4xl mx-auto mb-10">
+              <h2 className="text-3xl font-bold mb-6 text-center">Notre Portfolio</h2>
+              <p className="text-lg text-gray-700 mb-8 text-center">
+                Voici quelques exemples de nos travaux récents réalisés dans le département des Vosges. Qualité, précision et satisfaction client sont nos priorités sur chaque chantier.
+              </p>
+              
+              <Gallery images={portfolioImages} className="grid-cols-1 md:grid-cols-2 gap-6" />
             </div>
-
-            {/* Projets */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project) => (
-                <div 
-                  key={project.id}
-                  className="bg-white rounded-lg overflow-hidden shadow-md cursor-pointer transition-transform hover:scale-[1.02]"
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <div className="h-64 overflow-hidden">
-                    <img 
-                      src={project.imageUrl} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-xl font-bold mb-1">{project.title}</h3>
-                    <p className="text-gray-500 text-sm mb-2">{project.location}</p>
-                    <p className="text-gray-600">{project.description}</p>
-                  </div>
-                </div>
-              ))}
+            
+            <div className="mt-12 text-center">
+              <p className="text-lg font-semibold mb-4">
+                Vous avez un projet similaire ?
+              </p>
+              <a 
+                href="/contact" 
+                className="inline-block bg-roofing-red hover:bg-roofing-red/90 text-white py-3 px-6 rounded-md font-medium transition-colors"
+              >
+                Demandez un devis gratuit
+              </a>
             </div>
-
-            {filteredProjects.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-500">Aucune réalisation trouvée dans cette catégorie.</p>
-              </div>
-            )}
           </div>
         </section>
-
-        {/* Modal pour afficher le projet */}
-        {selectedProject && (
-          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col">
-              <div className="p-4 border-b flex justify-between items-center">
-                <h3 className="text-xl font-bold">{selectedProject.title}</h3>
-                <button 
-                  onClick={() => setSelectedProject(null)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div className="flex-1 overflow-auto">
-                <div className="h-[40vh] md:h-[50vh]">
-                  <img 
-                    src={selectedProject.imageUrl} 
-                    alt={selectedProject.title} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-gray-500 mb-4">Localisation: {selectedProject.location}</p>
-                  <p className="text-gray-700">{selectedProject.description}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         <CTA />
       </main>
