@@ -14,7 +14,7 @@ const RavalementFacade = () => {
       id: 2,
       src: "/lovable-uploads/199c2dd5-99d0-49e7-8004-580fe09be1cb.png",
       alt: "Maison moderne avec façade blanche et grise",
-      description: "Rénovation contemporaine avec deux teintes d'enduit"
+      description: "Rénovation contemporaine avec deux teintes d'enduit - avant/après"
     },
     {
       id: 3,
