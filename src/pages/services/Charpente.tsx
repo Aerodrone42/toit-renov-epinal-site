@@ -1,7 +1,36 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const Charpente = () => {
+  // Images pour la galerie
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/adfd3d61-ef8d-44ea-88e7-d775679cab8f.png",
+      alt: "Rénovation de charpente traditionnelle",
+      description: "Installation d'une nouvelle charpente en bois sur une maison ancienne"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/89220e48-c552-4535-a162-de79831d070d.png",
+      alt: "Ossature bois et charpente industrielle",
+      description: "Structure de charpente industrielle sur une nouvelle construction en briques"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/1be4618f-d4b4-4bf3-adbe-f29442ec36a5.png",
+      alt: "Détail de charpente en bois",
+      description: "Vue intérieure d'une charpente traditionnelle en bois avec isolation"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/6c072215-81fa-4507-a838-e4b47673496e.png",
+      alt: "Toiture et fenêtre de toit",
+      description: "Toiture en tuiles avec fenêtres de toit après installation de la charpente"
+    }
+  ];
+
   return (
     <ServicePage
       title="Charpente"
@@ -15,6 +44,12 @@ const Charpente = () => {
             et à la durabilité de votre habitation. RÉNOVATION TECHNI TOIT intervient pour toutes les 
             opérations de réparation, traitement et rénovation de charpente dans les Vosges.
           </p>
+          
+          {/* Ajout de la galerie de photos */}
+          <div className="my-8">
+            <h2 className="text-2xl font-bold mb-6">Nos réalisations</h2>
+            <Gallery images={galleryImages} />
+          </div>
           
           <h2>Nos services de charpente</h2>
           
