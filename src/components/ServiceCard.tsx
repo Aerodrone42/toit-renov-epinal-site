@@ -23,7 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageUrl
 }) => {
   return (
-    <div className={cn("service-card", className)}>
+    <div className={cn("bg-white p-6 rounded-lg shadow-md flex flex-col h-full", className)}>
       {imageUrl && (
         <div className="h-48 mb-4 overflow-hidden rounded-md">
           <img 
@@ -33,7 +33,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           />
         </div>
       )}
-      <div className="service-card-icon">
+      <div className="flex items-center mb-4">
         <Icon size={36} className="text-roofing-red" />
       </div>
       <h3 className="text-xl font-bold mb-2">{title}</h3>

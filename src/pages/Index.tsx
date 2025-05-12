@@ -100,7 +100,7 @@ const Index = () => {
                 description="Élimination des mousses, lichens et autres végétaux qui dégradent votre toiture et réduisent sa durée de vie."
                 icon={Home}
                 to="/services/demoussage-nettoyage-toiture"
-                imageUrl="/service-demoussage.jpg"
+                imageUrl="/lovable-uploads/ae4a9b9f-0004-4898-a39d-3b18ef027063.png"
               />
               
               <ServiceCard
@@ -108,7 +108,7 @@ const Index = () => {
                 description="Protection et embellissement de vos boiseries extérieures avec des traitements de qualité adaptés aux conditions climatiques."
                 icon={Paintbrush}
                 to="/services/peinture-boiserie"
-                imageUrl="/service-peinture.jpg"
+                imageUrl="/lovable-uploads/b59f52be-dc5d-4494-94ab-0255681217ac.png"
               />
               
               <ServiceCard
@@ -116,7 +116,7 @@ const Index = () => {
                 description="Nettoyage et rénovation de vos façades pour redonner éclat et protection à votre habitation."
                 icon={Building2}
                 to="/services/ravalement-facade"
-                imageUrl="/service-facade.jpg"
+                imageUrl="/lovable-uploads/894ad7f0-315f-4c5f-af4f-d61e895d0d41.png"
               />
               
               <ServiceCard
@@ -124,7 +124,7 @@ const Index = () => {
                 description="Remplacement des tuiles cassées, traitement de la charpente et réparation de l'étanchéité pour une toiture comme neuve."
                 icon={Wrench}
                 to="/services/renovation-toiture"
-                imageUrl="/service-renovation.jpg"
+                imageUrl="/lovable-uploads/eaa6d0be-0959-43a5-a5cc-1b11af1f94b6.png"
               />
               
               <ServiceCard
@@ -132,7 +132,7 @@ const Index = () => {
                 description="Installation complète d'une nouvelle toiture avec des matériaux de qualité pour une protection optimale de votre habitation."
                 icon={Home}
                 to="/services/changement-toiture"
-                imageUrl="/service-changement.jpg"
+                imageUrl="/lovable-uploads/9cace31b-af24-4a82-ba1e-2a4e4319a027.png"
               />
               
               <ServiceCard
@@ -140,7 +140,7 @@ const Index = () => {
                 description="Interventions ponctuelles pour réparer les dégâts sur votre toiture ou façade suite à des intempéries ou à l'usure."
                 icon={Workflow}
                 to="/services/reparations-diverses"
-                imageUrl="/service-reparations.jpg"
+                imageUrl="/lovable-uploads/3c534ef2-f5fc-4793-b0a9-0be15a22f2a0.png"
               />
             </div>
 
