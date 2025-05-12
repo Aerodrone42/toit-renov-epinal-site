@@ -1,7 +1,35 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const RavalementFacade = () => {
+  const facadeImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/dc800855-2163-49cb-a518-07ad2d90875a.png",
+      alt: "Maison individuelle avec façade beige rénovée",
+      description: "Façade entretenue avec soin pour une protection durable"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/199c2dd5-99d0-49e7-8004-580fe09be1cb.png",
+      alt: "Maison moderne avec façade blanche et grise",
+      description: "Rénovation contemporaine avec deux teintes d'enduit"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/0edd1485-d590-451f-bffb-f308e25b3a20.png",
+      alt: "Comparaison avant/après sur une façade",
+      description: "Exemple de nettoyage de façade - avant/après"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/4ecfe817-7b88-4648-9f65-bacd200a7e1a.png",
+      alt: "Maison avec façade blanche et volets bleus",
+      description: "Rénovation complète avec peinture de façade et boiseries"
+    }
+  ];
+  
   return (
     <ServicePage
       title="Ravalement de Façade"
@@ -16,6 +44,12 @@ const RavalementFacade = () => {
             RÉNOVATION TECHNI TOIT vous propose des solutions complètes pour rénover et embellir les façades 
             de votre maison dans les Vosges.
           </p>
+          
+          {/* Galerie de photos */}
+          <h2 className="mt-8 mb-4">Nos réalisations de ravalement de façade</h2>
+          <div className="mb-8">
+            <Gallery images={facadeImages} />
+          </div>
           
           <h2>Pourquoi rénover votre façade ?</h2>
           
