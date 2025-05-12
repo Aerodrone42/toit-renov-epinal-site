@@ -1,7 +1,36 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const ChangementToiture = () => {
+  // Images pour la galerie
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/c45ac81c-5a1d-4b37-8272-22f55aeb30ac.png",
+      alt: "Toiture ancienne avec mousse et tuiles cassées",
+      description: "État d'une toiture nécessitant un remplacement complet - tuiles endommagées avec présence importante de mousse"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/e4362f31-505b-4281-b2a7-2a7a995ef73e.png",
+      alt: "Préparation de toiture avec isolation et liteaux",
+      description: "Installation de l'écran sous-toiture et des liteaux avant pose des nouvelles tuiles"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/3d1e0409-7b33-4ea1-a515-95f33dc89773.png",
+      alt: "Chantier de changement de toiture en cours",
+      description: "Travaux de remplacement avec échafaudage et préparation de la nouvelle couverture"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/b20ab263-0056-451d-b910-8e5954654e1f.png",
+      alt: "Toiture neuve terminée avec tuiles terre cuite",
+      description: "Résultat final d'un changement complet de toiture avec fenêtres de toit intégrées"
+    }
+  ];
+
   return (
     <ServicePage
       title="Changement de Toiture"
@@ -15,6 +44,12 @@ const ChangementToiture = () => {
             de votre habitation pour de nombreuses années. RÉNOVATION TECHNI TOIT vous accompagne dans ce projet 
             d'envergure avec expertise et professionnalisme.
           </p>
+          
+          {/* Ajout de la galerie de photos */}
+          <div className="my-8">
+            <h2 className="text-2xl font-bold mb-6">Nos réalisations</h2>
+            <Gallery images={galleryImages} />
+          </div>
           
           <h2>Quand envisager un changement complet de toiture ?</h2>
           
