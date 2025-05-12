@@ -1,7 +1,36 @@
 
 import ServicePage from "@/pages/ServicePage";
+import { Gallery } from "@/components/Gallery";
 
 const RenovationToiture = () => {
+  // Images pour la galerie
+  const galleryImages = [
+    {
+      id: 1,
+      src: "/lovable-uploads/ac2f26c3-20b8-4f96-bf24-ed45ec235d0c.png",
+      alt: "Isolation et préparation d'une toiture en rénovation",
+      description: "Isolation thermique avec écran sous-toiture et installation de liteaux"
+    },
+    {
+      id: 2,
+      src: "/lovable-uploads/5a98d3d5-fd11-4c5f-a203-6765f5b5b7e2.png",
+      alt: "Rénovation d'une toiture en cours",
+      description: "Vue panoramique d'un chantier de rénovation avec pose de tuiles neuves"
+    },
+    {
+      id: 3,
+      src: "/lovable-uploads/e0d54cb8-e23e-4ef7-bd8a-19b9c7005357.png",
+      alt: "Toiture rénovée avec tuiles en terre cuite",
+      description: "Finition qualitative d'une toiture avec fenêtre de toit intégrée"
+    },
+    {
+      id: 4,
+      src: "/lovable-uploads/19100e38-bce4-4f24-b2be-9565299a9ecf.png",
+      alt: "Toiture rénovée en tuiles mécaniques",
+      description: "Réalisation complète avec intégration de fenêtres de toit"
+    }
+  ];
+
   return (
     <ServicePage
       title="Rénovation de Toiture"
@@ -16,6 +45,12 @@ const RenovationToiture = () => {
             RÉNOVATION TECHNI TOIT vous propose des solutions complètes pour rénover votre toiture et lui donner 
             une nouvelle jeunesse.
           </p>
+          
+          {/* Ajout de la galerie de photos */}
+          <div className="my-8">
+            <h2 className="text-2xl font-bold mb-6">Nos réalisations</h2>
+            <Gallery images={galleryImages} />
+          </div>
           
           <h2>Pourquoi rénover votre toiture ?</h2>
           
