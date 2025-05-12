@@ -106,10 +106,13 @@ const Footer = () => {
         {/* Zone d'intervention */}
         <div className="border-t border-gray-700 pt-6 mb-6">
           <h4 className="text-lg font-medium mb-3 text-white">Zone d'intervention</h4>
-          <p className="text-gray-300">
+          <p className="text-gray-300 mb-3">
             Épinal (88000) et dans un rayon de 50 km : Golbey, Chantraine, Thaon-les-Vosges, 
             Dogneville, Chavelot, Deyvillers, Saint-Laurent et toutes les communes environnantes des Vosges.
           </p>
+          <Link to="/zones-intervention" className="text-roofing-red hover:text-roofing-red/80 transition-colors font-medium">
+            Voir toutes nos zones d'intervention →
+          </Link>
         </div>
         
         {/* Copyright */}

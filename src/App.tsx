@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
-import Realisations from "./pages/Realisations";
+import ZonesIntervention from "./pages/ZonesIntervention";
 import NotFound from "./pages/NotFound";
 import CallButton from "./components/CallButton";
 
@@ -21,6 +21,29 @@ import ReparationsDiverses from "./pages/services/ReparationsDiverses";
 import Charpente from "./pages/services/Charpente";
 import DessousDeToit from "./pages/services/DessousDeToit";
 
+// Pages des villes
+import Epinal from "./pages/cities/Epinal";
+import ThaonLesVosges from "./pages/cities/ThaonLesVosges";
+import Remiremont from "./pages/cities/Remiremont";
+import Mirecourt from "./pages/cities/Mirecourt";
+import SaintDieDesVosges from "./pages/cities/SaintDieDesVosges";
+import Charmes from "./pages/cities/Charmes";
+import Golbey from "./pages/cities/Golbey";
+import Gerardmer from "./pages/cities/Gerardmer";
+import SaintEtienneLesRemiremont from "./pages/cities/SaintEtienneLesRemiremont";
+import LeValDAjol from "./pages/cities/LeValDAjol";
+import Neufchateau from "./pages/cities/Neufchateau";
+import Vittel from "./pages/cities/Vittel";
+import Dompaire from "./pages/cities/Dompaire";
+import Rambervillers from "./pages/cities/Rambervillers";
+import RaonLEtape from "./pages/cities/RaonLEtape";
+import Bruyeres from "./pages/cities/Bruyeres";
+import LaBresse from "./pages/cities/LaBresse";
+import Xertigny from "./pages/cities/Xertigny";
+import Chantraine from "./pages/cities/Chantraine";
+import Uxegney from "./pages/cities/Uxegney";
+import Vagney from "./pages/cities/Vagney";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -33,7 +56,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/realisations" element={<Realisations />} />
+          <Route path="/zones-intervention" element={<ZonesIntervention />} />
           
           {/* Routes des services */}
           <Route path="/services/demoussage-nettoyage-toiture" element={<DemoussageToiture />} />
@@ -45,6 +68,29 @@ const App = () => (
           <Route path="/services/reparations-diverses" element={<ReparationsDiverses />} />
           <Route path="/services/charpente" element={<Charpente />} />
           <Route path="/services/dessous-de-toit" element={<DessousDeToit />} />
+          
+          {/* Routes des villes */}
+          <Route path="/zones/epinal" element={<Epinal />} />
+          <Route path="/zones/thaon-les-vosges" element={<ThaonLesVosges />} />
+          <Route path="/zones/remiremont" element={<Remiremont />} />
+          <Route path="/zones/mirecourt" element={<Mirecourt />} />
+          <Route path="/zones/saint-die-des-vosges" element={<SaintDieDesVosges />} />
+          <Route path="/zones/charmes" element={<Charmes />} />
+          <Route path="/zones/golbey" element={<Golbey />} />
+          <Route path="/zones/gerardmer" element={<Gerardmer />} />
+          <Route path="/zones/saint-etienne-les-remiremont" element={<SaintEtienneLesRemiremont />} />
+          <Route path="/zones/le-val-dajol" element={<LeValDAjol />} />
+          <Route path="/zones/neufchateau" element={<Neufchateau />} />
+          <Route path="/zones/vittel" element={<Vittel />} />
+          <Route path="/zones/dompaire" element={<Dompaire />} />
+          <Route path="/zones/rambervillers" element={<Rambervillers />} />
+          <Route path="/zones/raon-letape" element={<RaonLEtape />} />
+          <Route path="/zones/bruyeres" element={<Bruyeres />} />
+          <Route path="/zones/la-bresse" element={<LaBresse />} />
+          <Route path="/zones/xertigny" element={<Xertigny />} />
+          <Route path="/zones/chantraine" element={<Chantraine />} />
+          <Route path="/zones/uxegney" element={<Uxegney />} />
+          <Route path="/zones/vagney" element={<Vagney />} />
           
           {/* Catch-all route pour les pages non trouvées */}
           <Route path="*" element={<NotFound />} />
