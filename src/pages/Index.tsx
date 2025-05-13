@@ -79,6 +79,29 @@ const Index = () => {
                 </div>
               </div>
             </div>
+
+            {/* Section Rénovation de toiture qui n'apparaissait pas en mobile */}
+            <div className="mt-12 py-6 border-t border-b border-gray-200">
+              <div className="flex flex-col md:flex-row items-center">
+                <div className="md:w-1/2 mb-6 md:mb-0">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">Rénovation de toiture</h3>
+                  <p className="text-gray-600 mb-4">
+                    Experts en rénovation de toiture dans les Vosges, nous intervenons pour tous types de réparations
+                    et remises à neuf de votre couverture. Notre équipe qualifiée garantit un travail soigné et durable.
+                  </p>
+                  <Link to="/services/renovation-toiture">
+                    <Button className="btn-primary">En savoir plus</Button>
+                  </Link>
+                </div>
+                <div className="md:w-1/2 md:pl-8">
+                  <img 
+                    src="/lovable-uploads/eaa6d0be-0959-43a5-a5cc-1b11af1f94b6.png"
+                    alt="Rénovation de toiture" 
+                    className="w-full h-auto rounded-lg shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
