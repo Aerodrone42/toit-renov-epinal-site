@@ -23,13 +23,13 @@ const DemoussageToiture = () => {
       id: 3,
       src: "/lovable-uploads/4464ece2-75b1-4b8f-ac36-41f1bd807eb3.png",
       alt: "Équipement de nettoyage de toiture",
-      description: "Notre équipement professionnel pour le traitement des toitures"
+      description: "Nettoyage de toiture à Epinal"
     },
     {
       id: 4,
       src: "/lovable-uploads/338cf9e1-9eae-49ca-928e-6a0a4e13fd56.png",
       alt: "Matériel technique pour le démoussage",
-      description: "Matériel spécialisé pour un traitement efficace"
+      description: "Démoussage toiture à Epinal"
     }
   ];
   
