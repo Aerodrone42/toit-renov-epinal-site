@@ -11,10 +11,16 @@ interface CityPageProps {
   mainCity: string;
   surroundingCities: string[];
   imageUrl?: string;
+  portfolioImages?: {
+    id: number;
+    src: string;
+    alt: string;
+    description: string;
+  }[];
 }
 
-// Images du portfolio pour toutes les sous-pages secteurs
-const portfolioImages = [
+// Images du portfolio par défaut pour toutes les sous-pages secteurs
+const defaultPortfolioImages = [
   {
     id: 1,
     src: "/lovable-uploads/124b6f79-06cd-4ad1-a2e2-0ebce63c4ade.png",
@@ -41,7 +47,7 @@ const portfolioImages = [
   }
 ];
 
-const CityPage = ({ mainCity, surroundingCities, imageUrl = "/service-peinture.jpg" }: CityPageProps) => {
+const CityPage = ({ mainCity, surroundingCities, imageUrl = "/service-peinture.jpg", portfolioImages = defaultPortfolioImages }: CityPageProps) => {
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
