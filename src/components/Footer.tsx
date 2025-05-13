@@ -115,6 +115,16 @@ const Footer = () => {
           </Link>
         </div>
         
+        {/* Liens légaux */}
+        <div className="border-t border-gray-700 pt-6 mb-6 flex flex-wrap justify-center gap-4 text-sm">
+          <Link to="/mentions-legales" className="text-gray-300 hover:text-roofing-red transition-colors">
+            Mentions légales
+          </Link>
+          <Link to="/politique-confidentialite" className="text-gray-300 hover:text-roofing-red transition-colors">
+            Politique de confidentialité
+          </Link>
+        </div>
+        
         {/* Copyright */}
         <div className="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
           <p>© {new Date().getFullYear()} RÉNOVATION TECHNI TOIT - Tous droits réservés</p>

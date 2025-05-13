@@ -11,6 +11,9 @@ import ZonesIntervention from "./pages/ZonesIntervention";
 import NotFound from "./pages/NotFound";
 import CallButton from "./components/CallButton";
 import Realisations from "./pages/Realisations";
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+import CookieConsent from "./components/CookieConsent";
 
 // Pages de service
 import DemoussageToiture from "./pages/services/DemoussageToiture";
@@ -61,6 +64,8 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/zones-intervention" element={<ZonesIntervention />} />
           <Route path="/realisations" element={<Realisations />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
           
           {/* Routes des services */}
           <Route path="/services/demoussage-nettoyage-toiture" element={<DemoussageToiture />} />
@@ -99,6 +104,7 @@ const App = () => (
           {/* Catch-all route pour les pages non trouvées */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
