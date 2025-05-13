@@ -38,6 +38,30 @@ const HeroBanner = () => {
             </Link>
           </div>
           
+          {/* Points clés - Maintenant visible sur mobile */}
+          <div className="mt-6">
+            <div className="flex flex-col space-y-3">
+              <div className="flex items-center">
+                <span className="text-roofing-red mr-2">✓</span>
+                <span>Intervention rapide</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-roofing-red mr-2">✓</span>
+                <span>Artisans qualifiés</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-roofing-red mr-2">✓</span>
+                <span>Assurance décennale</span>
+              </div>
+            </div>
+            
+            <div className="mt-4">
+              <Link to="/contact">
+                <Button className="btn-primary">Nous contacter</Button>
+              </Link>
+            </div>
+          </div>
+          
           {/* Badge assurance */}
           <div className="mt-6 md:mt-8 inline-block bg-black/50 backdrop-blur-sm px-3 py-2 rounded-md">
             <p className="flex items-center text-white text-sm md:text-base font-medium">

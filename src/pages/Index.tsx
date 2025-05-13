@@ -1,4 +1,3 @@
-
 import SEOHead from "@/components/SEOHead";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -42,24 +41,24 @@ const Index = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start">
-                    <Check size={20} className="text-roofing-red mr-2 mt-1" />
+                    <Check size={20} className="text-roofing-red mr-2 mt-1 flex-shrink-0" />
                     <span>Devis gratuit et personnalisé</span>
                   </div>
                   <div className="flex items-start">
-                    <Check size={20} className="text-roofing-red mr-2 mt-1" />
+                    <Check size={20} className="text-roofing-red mr-2 mt-1 flex-shrink-0" />
                     <span>Intervention rapide</span>
                   </div>
                   <div className="flex items-start">
-                    <Check size={20} className="text-roofing-red mr-2 mt-1" />
+                    <Check size={20} className="text-roofing-red mr-2 mt-1 flex-shrink-0" />
                     <span>Artisans qualifiés</span>
                   </div>
                   <div className="flex items-start">
-                    <Check size={20} className="text-roofing-red mr-2 mt-1" />
+                    <Check size={20} className="text-roofing-red mr-2 mt-1 flex-shrink-0" />
                     <span>Assurance décennale</span>
                   </div>
                 </div>
 
-                <Link to="/contact">
+                <Link to="/contact" className="block mb-6">
                   <Button className="btn-primary">Nous contacter</Button>
                 </Link>
               </div>
