@@ -23,7 +23,7 @@ const NotFound = () => {
           La page que vous recherchez n'existe pas ou a été déplacée.
         </p>
         <Button 
-          onClick={() => window.location.href = "/#/"}
+          onClick={() => window.location.href = "/"}
           className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
         >
           <ArrowLeft size={16} />
