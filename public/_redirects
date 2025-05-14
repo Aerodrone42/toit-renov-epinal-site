@@ -1,3 +1,21 @@
 
-# Redirects for SPA
+# Redirections spécifiques pour les services
+/services/demoussage-nettoyage-toiture /services/demoussage-nettoyage-toiture 200
+/services/renovation-toiture /services/renovation-toiture 200  
+/services/changement-toiture /services/changement-toiture 200
+/services/nettoyage-cheneau /services/nettoyage-cheneau 200
+/services/peinture-boiserie /services/peinture-boiserie 200
+/services/ravalement-facade /services/ravalement-facade 200
+/services/charpente /services/charpente 200
+/services/dessous-de-toit /services/dessous-de-toit 200
+/services/reparations-diverses /services/reparations-diverses 200
+
+# Redirections spécifiques pour les zones
+/zones/* /zones/:splat 200
+
+# Redirections pour les pages légales
+/mentions-legales /mentions-legales 200
+/politique-confidentialite /politique-confidentialite 200
+
+# Redirection par défaut pour toutes les autres routes
 /*    /index.html   200

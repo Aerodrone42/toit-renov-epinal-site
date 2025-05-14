@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <title>Redirection | RÉNOVATION TECHNI TOIT</title>
@@ -11,13 +11,16 @@
     var pathSegmentsToKeep = 0;
 
     var l = window.location;
-    l.replace(
-      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+    var newUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
       l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
       l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
       (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-      l.hash
-    );
+      l.hash;
+    
+    // Enregistre l'erreur dans la console pour le débogage
+    console.log("Redirection de: " + l.pathname + " vers: " + newUrl);
+    
+    l.replace(newUrl);
   </script>
   <style>
     body {
@@ -37,11 +40,27 @@
     h1 {
       color: #3b82f6;
     }
+    .spinner {
+      margin: 20px auto;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3b82f6;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
+  <!-- Ajoute les balises meta pour éviter l'indexation de la page d'erreur -->
+  <meta name="robots" content="noindex">
 </head>
 <body>
   <div class="container">
     <h1>Redirection en cours...</h1>
+    <div class="spinner"></div>
     <p>Vous allez être redirigé vers la page demandée. Si la redirection ne fonctionne pas, <a href="/">cliquez ici pour retourner à l'accueil</a>.</p>
   </div>
 </body>
