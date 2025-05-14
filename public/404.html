@@ -8,26 +8,18 @@
   <meta name="robots" content="noindex">
   
   <script type="text/javascript">
-    // Script de redirection simplifié et optimisé
+    // Script de redirection optimisé
     (function() {
-      console.log("404.html - Début de la redirection");
-      
       // Récupérer le chemin demandé
       var path = window.location.pathname;
-      var hostname = window.location.hostname;
       
       // Ne pas rediriger les ressources statiques
       if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(path)) {
-        console.log("Ressource statique détectée, pas de redirection");
         return;
       }
       
       // Redirection directe vers la racine
-      var redirectUrl = window.location.origin + '/' + (path.startsWith('/') ? path.substring(1) : path);
-      console.log("Redirection vers:", redirectUrl);
-      
-      // Redirection immédiate
-      window.location.replace(redirectUrl);
+      window.location.replace(window.location.origin);
     })();
   </script>
   
@@ -106,7 +98,7 @@
     <img src="/lovable-uploads/6405d24d-4938-452a-b21b-43c782556b25.png" alt="RÉNOVATION TECHNI TOIT" class="logo">
     <h1>Redirection en cours...</h1>
     <div class="spinner"></div>
-    <p>Nous vous redirigeons vers la page demandée.</p>
+    <p>Nous vous redirigeons vers la page d'accueil.</p>
     
     <div class="buttons">
       <a href="/" class="button">Accueil</a>

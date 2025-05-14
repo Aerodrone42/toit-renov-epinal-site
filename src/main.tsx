@@ -4,13 +4,9 @@ import App from './App.tsx'
 import './index.css'
 
 // Fonction de gestion simplifiée et optimisée
-(function() {
-  // Débogage minimal
-  console.log("URL actuelle:", window.location.href);
-  
-  // Gestion des URL canoniques pour SEO
+const optimizeUrl = () => {
+  // Supprime le slash final pour normaliser les URL
   if (window.location.pathname.endsWith('/') && window.location.pathname.length > 1) {
-    // Supprime le slash final pour normaliser les URL
     const normalizedPath = window.location.pathname.slice(0, -1);
     window.history.replaceState(null, '', normalizedPath + window.location.search + window.location.hash);
   }
@@ -18,10 +14,18 @@ import './index.css'
   // Correction pour www vs non-www (important pour le SEO)
   const hostname = window.location.hostname;
   if (hostname.startsWith('www.renovationtechnitoit.fr')) {
-    const newUrl = window.location.href.replace('www.renovationtechnitoit.fr', 'renovationtechnitoit.fr');
-    window.location.replace(newUrl);
+    window.location.replace(
+      window.location.href.replace('www.renovationtechnitoit.fr', 'renovationtechnitoit.fr')
+    );
+    return false;
   }
-})();
+  
+  return true;
+};
 
-// Rendu immédiat de l'application sans attendre les redirections
-createRoot(document.getElementById("root")!).render(<App />);
+// Exécuter les optimisations d'URL uniquement si nécessaire
+if (optimizeUrl()) {
+  // Rendu immédiat de l'application si aucune redirection n'est nécessaire
+  const root = createRoot(document.getElementById("root")!);
+  root.render(<App />);
+}

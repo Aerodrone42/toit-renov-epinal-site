@@ -1,26 +1,46 @@
 
+import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { AspectRatio } from './ui/aspect-ratio';
 
 const HeroBanner = () => {
   const isMobile = useIsMobile();
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
+  // Précharger l'image de fond
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/lovable-uploads/b89fcd9b-217c-47a7-8722-43a58454d8e1.png";
+    img.onload = () => setImageLoaded(true);
+    
+    return () => {
+      img.onload = null;
+    };
+  }, []);
   
   return (
     <div className="relative bg-gray-900 h-[60vh] md:h-[70vh] flex items-center">
-      {/* Image de fond avec superposition plus visible */}
+      {/* Image de fond avec chargement optimisé et superposition plus visible */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <img 
-          src="/lovable-uploads/b89fcd9b-217c-47a7-8722-43a58454d8e1.png" 
-          alt="Camion RÉNOVATION TECHNI TOIT" 
-          className="w-full h-full object-cover object-center"
-        />
+        {imageLoaded ? (
+          <img 
+            src="/lovable-uploads/b89fcd9b-217c-47a7-8722-43a58454d8e1.png" 
+            alt="Camion RÉNOVATION TECHNI TOIT" 
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+            fetchpriority="high"
+          />
+        ) : (
+          <div className="w-full h-full bg-gray-800"></div>
+        )}
       </div>
       
       {/* Contenu */}
       <div className="container-custom relative z-20 text-white pt-40 md:pt-32">
-        {/* Logo/Titre en haut pour mobile - Ajusté pour éviter le chevauchement */}
+        {/* Logo/Titre en haut pour mobile */}
         {isMobile && (
           <div className="mb-6">
             <span className="text-xl font-bold text-roofing-red bg-black/50 py-1 px-2 rounded">
@@ -47,7 +67,7 @@ const HeroBanner = () => {
             </Link>
           </div>
           
-          {/* Points clés - Maintenant visible sur mobile */}
+          {/* Points clés */}
           <div className="mt-6">
             <div className="flex flex-col space-y-3">
               <div className="flex items-center">
@@ -88,4 +108,4 @@ const HeroBanner = () => {
   );
 };
 
-export default HeroBanner;
+export default React.memo(HeroBanner);
