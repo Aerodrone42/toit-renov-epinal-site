@@ -1,16 +1,11 @@
 
-# Configuration de redirection simplifiée et optimisée pour Netlify
+# Configuration de redirection optimisée pour Netlify
 
-# Redirections spéciales pour les pages
-/services/*      /index.html   200
-/zones/*         /index.html   200
+# Redirections SPA pour React Router
+/*      /index.html   200
 
-# Redirections pour les pages légales et principales
-/mentions-legales            /index.html   200
-/politique-confidentialite   /index.html   200
-/contact                     /index.html   200
-/realisations                /index.html   200
-/zones-intervention          /index.html   200
-
-# Redirection par défaut pour toutes les autres routes
-/*                           /index.html   200
+# Headers pour l'optimisation
+/static/*  Cache-Control: public, max-age=31536000, immutable
+/*.js      Cache-Control: public, max-age=31536000, immutable
+/*.css     Cache-Control: public, max-age=31536000, immutable
+/*.woff2   Cache-Control: public, max-age=31536000, immutable
