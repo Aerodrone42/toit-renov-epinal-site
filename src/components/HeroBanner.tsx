@@ -19,7 +19,7 @@ const HeroBanner = () => {
       </div>
       
       {/* Contenu */}
-      <div className="container-custom relative z-20 text-white pt-40 md:pt-24">
+      <div className="container-custom relative z-20 text-white pt-40 md:pt-32">
         {/* Logo/Titre en haut pour mobile - Ajusté pour éviter le chevauchement */}
         {isMobile && (
           <div className="mb-6">
