@@ -8,32 +8,13 @@
   <meta name="robots" content="noindex">
   
   <script type="text/javascript">
-    // Script de redirection spécifique pour GitHub Pages
+    // Script de redirection simplifié et optimisé
     (function() {
-      // Pour débogage
-      console.log("404.html - URL demandée:", window.location.href);
+      console.log("404.html - Début de la redirection");
       
       // Récupérer le chemin demandé
       var path = window.location.pathname;
       var hostname = window.location.hostname;
-      
-      // Correction pour les URL avec www (rediriger vers sans www)
-      if (hostname.startsWith('www.')) {
-        var newUrl = window.location.protocol + '//' + hostname.substring(4) + path;
-        console.log("Redirection www vers non-www:", newUrl);
-        window.location.replace(newUrl);
-        return;
-      }
-      
-      // Gestion des anciennes URLs potentielles
-      // Par exemple, si quelqu'un utilise /villes/ au lieu de /zones/
-      if (path.startsWith('/villes/')) {
-        var correctedPath = path.replace('/villes/', '/zones/');
-        var correctedUrl = window.location.origin + correctedPath;
-        console.log("Correction de l'URL ville vers zone:", correctedUrl);
-        window.location.replace(correctedUrl);
-        return;
-      }
       
       // Ne pas rediriger les ressources statiques
       if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(path)) {
@@ -41,9 +22,11 @@
         return;
       }
       
-      // Redirection vers la racine avec le paramètre route
-      var redirectUrl = window.location.origin + '/?route=' + path;
+      // Redirection directe vers la racine
+      var redirectUrl = window.location.origin + '/' + (path.startsWith('/') ? path.substring(1) : path);
       console.log("Redirection vers:", redirectUrl);
+      
+      // Redirection immédiate
       window.location.replace(redirectUrl);
     })();
   </script>
@@ -80,7 +63,7 @@
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      animation: spin 1s linear infinite;
+      animation: spin 0.5s linear infinite;
     }
     @keyframes spin {
       0% { transform: rotate(0deg); }
@@ -124,7 +107,6 @@
     <h1>Redirection en cours...</h1>
     <div class="spinner"></div>
     <p>Nous vous redirigeons vers la page demandée.</p>
-    <p>Si vous n'êtes pas redirigé automatiquement, utilisez l'un des boutons ci-dessous :</p>
     
     <div class="buttons">
       <a href="/" class="button">Accueil</a>
