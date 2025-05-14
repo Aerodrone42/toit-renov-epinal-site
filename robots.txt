@@ -2,5 +2,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://renovationtechnitoit.fr/sitemap.xml
+# Important: Ne pas indexer la page d'erreur 404
+Disallow: /404.html
 
+Sitemap: https://renovationtechnitoit.fr/sitemap.xml

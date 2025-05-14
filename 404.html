@@ -4,41 +4,64 @@
 <head>
   <meta charset="utf-8">
   <title>Redirection | RÉNOVATION TECHNI TOIT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  
   <script type="text/javascript">
-    // Single Page Apps for GitHub Pages
-    // MIT Licensed: https://github.com/rafgraph/spa-github-pages
-    // Cette fonction prend l'URL actuelle et la transforme pour qu'elle fonctionne avec React Router
-    var pathSegmentsToKeep = 0;
-
-    var l = window.location;
-    var newUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-      l.hash;
-    
-    // Enregistre l'erreur dans la console pour le débogage
-    console.log("Redirection de: " + l.pathname + " vers: " + newUrl);
-    
-    l.replace(newUrl);
+    // Script de redirection amélioré pour SPA
+    (function() {
+      var l = window.location;
+      
+      // Log pour débogage
+      console.log("404.html - URL demandée:", l.pathname);
+      
+      // Supprime les éventuels double slashes
+      var cleanPath = l.pathname.replace(/\/+/g, '/');
+      
+      // Ne pas rediriger les ressources statiques (images, JS, etc.)
+      if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(cleanPath)) {
+        console.log("Ressource statique détectée, pas de redirection");
+        return;
+      }
+      
+      // Traitement spécial pour les chemins de services et zones
+      if (cleanPath.includes('/services/') || cleanPath.includes('/zones/')) {
+        // Garder le chemin tel quel - important pour les URLs spécifiques
+        console.log("URL de service ou zone détectée:", cleanPath);
+      }
+      
+      // Construire l'URL de redirection
+      var redirectUrl = l.origin + '/#' + cleanPath;
+      
+      console.log("Redirection vers:", redirectUrl);
+      window.location.replace(redirectUrl);
+    })();
   </script>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
+      padding: 50px 20px;
       background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
     }
     .container {
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto;
       background-color: white;
       padding: 30px;
       border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     }
     h1 {
       color: #3b82f6;
+      margin-bottom: 20px;
+    }
+    .logo {
+      max-width: 200px;
+      margin-bottom: 20px;
     }
     .spinner {
       margin: 20px auto;
@@ -53,15 +76,66 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    .buttons {
+      margin-top: 20px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin: 10px 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #2563eb;
+    }
+    .button.outline {
+      background-color: transparent;
+      border: 2px solid #3b82f6;
+      color: #3b82f6;
+    }
+    .button.outline:hover {
+      background-color: #f0f7ff;
+    }
+    .error-code {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 20px;
+    }
   </style>
-  <!-- Ajoute les balises meta pour éviter l'indexation de la page d'erreur -->
-  <meta name="robots" content="noindex">
 </head>
 <body>
   <div class="container">
+    <img src="/lovable-uploads/6405d24d-4938-452a-b21b-43c782556b25.png" alt="RÉNOVATION TECHNI TOIT" class="logo">
     <h1>Redirection en cours...</h1>
     <div class="spinner"></div>
-    <p>Vous allez être redirigé vers la page demandée. Si la redirection ne fonctionne pas, <a href="/">cliquez ici pour retourner à l'accueil</a>.</p>
+    <p>Nous vous redirigeons vers la page demandée.</p>
+    <p>Si vous n'êtes pas redirigé automatiquement, utilisez l'un des boutons ci-dessous :</p>
+    
+    <div class="buttons">
+      <a href="/" class="button">Accueil</a>
+      <a href="javascript:history.back()" class="button outline">Page précédente</a>
+    </div>
+    
+    <p class="error-code">Code d'erreur: 404 - Page non trouvée</p>
   </div>
+  
+  <!-- Script additionnel pour envoyer les données d'erreur -->
+  <script>
+    // Envoie des informations sur l'erreur 404 pour le monitoring
+    try {
+      var pageUrl = window.location.pathname;
+      var referrer = document.referrer;
+      console.log("Détails erreur 404 - URL:", pageUrl, "Référent:", referrer);
+      
+      // On pourrait ajouter ici un appel à un service de monitoring
+    } catch(e) {
+      console.error("Erreur lors de l'envoi des données:", e);
+    }
+  </script>
 </body>
 </html>
