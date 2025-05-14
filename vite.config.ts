@@ -20,5 +20,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "/", // Cette configuration est importante pour GitHub Pages avec domaine personnalisé
+  base: "/", // Configuration pour GitHub Pages avec domaine personnalisé
 }));
