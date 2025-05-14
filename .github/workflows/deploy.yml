@@ -34,17 +34,20 @@ jobs:
           cp -f public/404.html dist/ || true
           cp -f public/robots.txt dist/ || true
           cp -f public/_redirects dist/ || true
+          cp -f public/sitemap.xml dist/ || true
           
           # Create .nojekyll file (crucial for GitHub Pages with SPA)
           touch dist/.nojekyll
           
           # Copy image assets
-          cp -r public/lovable-uploads dist/ || true
-          mkdir -p dist/lovable-uploads || true
+          mkdir -p dist/lovable-uploads
+          cp -r public/lovable-uploads/* dist/lovable-uploads/ || true
           
           # Log what has been copied for debugging
           echo "Files in dist directory:"
           ls -la dist/
+          echo "Files in lovable-uploads directory:"
+          ls -la dist/lovable-uploads/ || true
         
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

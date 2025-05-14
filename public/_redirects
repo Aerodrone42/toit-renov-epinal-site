@@ -1,6 +1,10 @@
 
 # Configuration de redirection pour Netlify et autres services de déploiement
 
+# Redirections pour les anciennes URLs vers les nouvelles
+/villes/*      /zones/:splat    301
+/ville/*       /zones/:splat    301
+
 # Redirections spécifiques pour les services
 /services/*      /index.html   200
 
@@ -13,6 +17,9 @@
 /contact                     /index.html   200
 /realisations                /index.html   200
 /zones-intervention          /index.html   200
+
+# Redirection www vers non-www (important pour le SEO)
+https://www.renovationtechnitoit.fr/*      https://renovationtechnitoit.fr/:splat    301!
 
 # Important: Si un asset n'est pas trouvé, ne pas rediriger vers index.html
 /*.js                       /index.html   404

@@ -54,20 +54,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     }
     
     const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl && canonicalUrl) {
-      ogUrl.setAttribute('content', canonicalUrl);
+    if (ogUrl) {
+      const canonicalPath = canonicalUrl || window.location.pathname;
+      const fullUrl = `https://renovationtechnitoit.fr${canonicalPath}`;
+      ogUrl.setAttribute('content', fullUrl);
     }
     
     // Ajouter/mettre à jour le lien canonique
-    const canonical = canonicalUrl || window.location.href;
+    const canonicalPath = canonicalUrl || window.location.pathname;
+    const fullCanonicalUrl = `https://renovationtechnitoit.fr${canonicalPath}`;
+    
     let link = document.querySelector('link[rel="canonical"]');
     
     if (link) {
-      link.setAttribute('href', canonical);
+      link.setAttribute('href', fullCanonicalUrl);
     } else {
       link = document.createElement('link');
       link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', canonical);
+      link.setAttribute('href', fullCanonicalUrl);
       document.head.appendChild(link);
     }
     

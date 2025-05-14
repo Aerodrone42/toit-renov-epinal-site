@@ -15,8 +15,7 @@ import './index.css'
   if (routeParam) {
     console.log("Paramètre route détecté:", routeParam);
     
-    // Construire la nouvelle URL sans le paramètre route
-    const newUrl = window.location.pathname;
+    // Construire la nouvelle URL sans le paramètre route et rediriger
     window.history.replaceState(null, '', routeParam);
     
     console.log("Redirection vers:", routeParam);
@@ -27,6 +26,15 @@ import './index.css'
     // Supprime le slash final pour normaliser les URL
     const normalizedPath = window.location.pathname.slice(0, -1);
     window.history.replaceState(null, '', normalizedPath + window.location.search + window.location.hash);
+    console.log("URL normalisée:", window.location.href);
+  }
+  
+  // Correction pour www vs non-www (important pour le SEO)
+  const hostname = window.location.hostname;
+  if (hostname.startsWith('www.renovationtechnitoit.fr')) {
+    const newUrl = window.location.href.replace('www.renovationtechnitoit.fr', 'renovationtechnitoit.fr');
+    window.location.replace(newUrl);
+    console.log("Redirection www vers non-www:", newUrl);
   }
 })();
 
