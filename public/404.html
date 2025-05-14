@@ -8,22 +8,22 @@
   <meta name="robots" content="noindex">
   
   <script type="text/javascript">
-    // Script de redirection amélioré avec support GitHub Pages
+    // Script de redirection spécifique pour GitHub Pages
     (function() {
       // Pour débogage
       console.log("404.html - URL demandée:", window.location.href);
       
-      var pathSegments = window.location.pathname.split('/');
-      var cleanPath = pathSegments.join('/');
+      // Récupérer le chemin demandé
+      var path = window.location.pathname;
       
       // Ne pas rediriger les ressources statiques
-      if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(cleanPath)) {
+      if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(path)) {
         console.log("Ressource statique détectée, pas de redirection");
         return;
       }
       
-      // Redirection vers la page d'index
-      var redirectUrl = window.location.origin + '/?route=' + cleanPath + (window.location.search ? '&' + window.location.search.slice(1) : '') + (window.location.hash || '');
+      // Redirection vers la racine avec le paramètre route
+      var redirectUrl = window.location.origin + '/?route=' + path;
       console.log("Redirection vers:", redirectUrl);
       window.location.replace(redirectUrl);
     })();
