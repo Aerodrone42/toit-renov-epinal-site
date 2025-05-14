@@ -24,7 +24,13 @@ jobs:
         run: npm ci
         
       - name: Build
-        run: npm run build
+        run: |
+          npm run build
+          cp public/404.html dist/
+          cp public/CNAME dist/
+          cp public/robots.txt dist/
+          cp public/_redirects dist/
+          cp -r public/lovable-uploads dist/
         
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -32,3 +38,5 @@ jobs:
           folder: dist
           branch: gh-pages
           clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+

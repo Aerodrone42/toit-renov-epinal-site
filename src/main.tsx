@@ -10,12 +10,19 @@ import './index.css'
   console.log("Pathname:", window.location.pathname);
   console.log("Hash:", window.location.hash);
   
-  // Cas 1: Redirection depuis 404.html (hash contient le chemin)
-  if (window.location.hash && window.location.hash.startsWith("#/")) {
+  // Cas 1: Si nous sommes sur GitHub Pages et avons un hash qui contient un chemin
+  if (window.location.hash && window.location.hash.length > 1) {
     const path = window.location.hash.substring(1);
-    console.log("Redirection depuis 404.html détectée. Chemin:", path);
-    window.history.replaceState(null, '', path);
-    console.log("URL après redirection:", window.location.href);
+    console.log("Hash détecté. Chemin:", path);
+    
+    // Ne pas appliquer de redirection si nous sommes déjà sur une page avec ancre légitime
+    if (!path.startsWith('/') && !path.startsWith('#')) {
+      console.log("Ancre légitime, pas de redirection");
+    } else {
+      console.log("Redirection depuis 404.html détectée. Chemin:", path);
+      window.history.replaceState(null, '', path);
+      console.log("URL après redirection:", window.location.href);
+    }
   }
   
   // Cas 2: Redirection depuis ?/ (méthode GitHub Pages)
@@ -40,14 +47,6 @@ import './index.css'
     window.history.replaceState(null, '', normalizedPath + window.location.search + window.location.hash);
     console.log("URL normalisée (slash final supprimé):", window.location.href);
   }
-  
-  // Log pour monitoring des erreurs 404
-  window.addEventListener('error', function(e) {
-    console.error('Erreur détectée:', e.message);
-    if (e.message.includes('404') || e.message.includes('Not Found')) {
-      console.error('Erreur 404 détectée pour:', window.location.pathname);
-    }
-  });
 })();
 
 createRoot(document.getElementById("root")!).render(<App />);
