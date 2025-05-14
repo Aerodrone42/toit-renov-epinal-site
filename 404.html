@@ -15,6 +15,25 @@
       
       // Récupérer le chemin demandé
       var path = window.location.pathname;
+      var hostname = window.location.hostname;
+      
+      // Correction pour les URL avec www (rediriger vers sans www)
+      if (hostname.startsWith('www.')) {
+        var newUrl = window.location.protocol + '//' + hostname.substring(4) + path;
+        console.log("Redirection www vers non-www:", newUrl);
+        window.location.replace(newUrl);
+        return;
+      }
+      
+      // Gestion des anciennes URLs potentielles
+      // Par exemple, si quelqu'un utilise /villes/ au lieu de /zones/
+      if (path.startsWith('/villes/')) {
+        var correctedPath = path.replace('/villes/', '/zones/');
+        var correctedUrl = window.location.origin + correctedPath;
+        console.log("Correction de l'URL ville vers zone:", correctedUrl);
+        window.location.replace(correctedUrl);
+        return;
+      }
       
       // Ne pas rediriger les ressources statiques
       if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(path)) {
