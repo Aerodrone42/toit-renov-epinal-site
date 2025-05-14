@@ -19,8 +19,8 @@ const HeroBanner = () => {
       </div>
       
       {/* Contenu */}
-      <div className="container-custom relative z-20 text-white pt-20 md:pt-0">
-        {/* Logo/Titre en haut pour mobile */}
+      <div className="container-custom relative z-20 text-white pt-28 md:pt-0">
+        {/* Logo/Titre en haut pour mobile - Ajusté pour éviter le chevauchement */}
         {isMobile && (
           <div className="mb-6">
             <span className="text-xl font-bold text-roofing-red bg-black/50 py-1 px-2 rounded">
