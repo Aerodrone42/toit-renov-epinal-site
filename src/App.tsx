@@ -56,8 +56,8 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <CallButton /> {/* Ajout du bouton d'appel flottant */}
-      <BrowserRouter>
+      <CallButton />
+      <BrowserRouter basename="/">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />

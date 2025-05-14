@@ -6,13 +6,18 @@ import './index.css'
 // This script handles redirects for GitHub Pages when using React Router
 // It's needed because GitHub Pages doesn't support client-side routing natively
 (function() {
-  // If returning to the site after a redirect for SPA routing,
-  // remove the redirect parameters from the URL
-  const redirect = sessionStorage.redirect;
-  delete sessionStorage.redirect;
+  // Single Page Apps for GitHub Pages - redirect script
+  const redirectRegex = /\?\/([^&]*)/;
+  const match = window.location.search.match(redirectRegex);
   
-  if (redirect && redirect !== window.location.href) {
-    window.history.replaceState(null, '', redirect);
+  if (match && match.length > 1) {
+    const pathname = match[1];
+    const searchAndHash = window.location.search.replace(redirectRegex, '') + window.location.hash;
+    
+    // Replace current URL with the decoded path
+    window.history.replaceState(null, '', 
+      '/' + pathname + searchAndHash
+    );
   }
 })();
 
