@@ -42,6 +42,22 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       }
     }
     
+    // Mettre à jour les balises OpenGraph
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', `${title} | RÉNOVATION TECHNI TOIT`);
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', description);
+    }
+    
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl && canonicalUrl) {
+      ogUrl.setAttribute('content', canonicalUrl);
+    }
+    
     // Ajouter/mettre à jour le lien canonique
     const canonical = canonicalUrl || window.location.href;
     let link = document.querySelector('link[rel="canonical"]');
