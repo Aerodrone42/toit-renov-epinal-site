@@ -10,22 +10,11 @@
   <script type="text/javascript">
     // Script de redirection amélioré avec support GitHub Pages
     (function() {
-      var segmentCount = 0; // Pour GitHub Pages avec domaine personnalisé
-      var l = window.location;
+      // Pour débogage
+      console.log("404.html - URL demandée:", window.location.href);
       
-      // Pour GitHub Pages
-      if (l.hostname.includes('github.io')) {
-        segmentCount = 1; // Pour les sites GitHub Pages sans domaine personnalisé
-      }
-      
-      // Log pour débogage
-      console.log("404.html - URL demandée:", l.pathname);
-      
-      // Méthode de redirection spéciale pour GitHub Pages
-      var pathSegments = l.pathname.split('/');
-      var cleanPath = pathSegments
-        .slice(segmentCount)
-        .join('/');
+      var pathSegments = window.location.pathname.split('/');
+      var cleanPath = pathSegments.join('/');
       
       // Ne pas rediriger les ressources statiques
       if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(cleanPath)) {
@@ -33,8 +22,8 @@
         return;
       }
       
-      // Redirection vers la page d'index avec le chemin demandé en hash
-      var redirectUrl = l.origin + '/#' + cleanPath + (l.search || '') + (l.hash || '');
+      // Redirection vers la page d'index
+      var redirectUrl = window.location.origin + '/?route=' + cleanPath + (window.location.search ? '&' + window.location.search.slice(1) : '') + (window.location.hash || '');
       console.log("Redirection vers:", redirectUrl);
       window.location.replace(redirectUrl);
     })();

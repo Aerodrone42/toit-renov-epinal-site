@@ -23,6 +23,12 @@
 /realisations                               /index.html   200
 /zones-intervention                         /index.html   200
 
+# Important: Si un asset n'est pas trouvé, ne pas rediriger vers index.html
+/*.js                                       /index.html   404
+/*.css                                      /index.html   404
+/*.png                                      /index.html   404
+/*.jpg                                      /index.html   404
+/*.svg                                      /index.html   404
+
 # Redirection par défaut pour toutes les autres routes
 /*                                          /index.html   200
-

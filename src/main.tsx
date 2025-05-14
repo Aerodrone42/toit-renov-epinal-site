@@ -8,7 +8,26 @@ import './index.css'
   // Débogage initial
   console.log("URL actuelle:", window.location.href);
   console.log("Pathname:", window.location.pathname);
+  console.log("Search:", window.location.search);
   console.log("Hash:", window.location.hash);
+  
+  // Gestion des redirections en provenance de 404.html (paramètre route)
+  const urlParams = new URLSearchParams(window.location.search);
+  const routeParam = urlParams.get('route');
+  
+  if (routeParam) {
+    console.log("Paramètre route détecté:", routeParam);
+    
+    // Construire la nouvelle URL sans le paramètre route
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.delete('route');
+    
+    // Définir le nouveau chemin
+    newUrl.pathname = routeParam;
+    
+    console.log("Redirection vers:", newUrl.toString());
+    window.history.replaceState(null, '', newUrl.toString());
+  }
   
   // Cas 1: Si nous sommes sur GitHub Pages et avons un hash qui contient un chemin
   if (window.location.hash && window.location.hash.length > 1) {
@@ -19,25 +38,10 @@ import './index.css'
     if (!path.startsWith('/') && !path.startsWith('#')) {
       console.log("Ancre légitime, pas de redirection");
     } else {
-      console.log("Redirection depuis 404.html détectée. Chemin:", path);
+      console.log("Redirection depuis le hash détectée. Chemin:", path);
       window.history.replaceState(null, '', path);
       console.log("URL après redirection:", window.location.href);
     }
-  }
-  
-  // Cas 2: Redirection depuis ?/ (méthode GitHub Pages)
-  const redirectRegex = /\?\/([^&]*)/;
-  const match = window.location.search.match(redirectRegex);
-  if (match && match.length > 1) {
-    const pathname = match[1];
-    const searchAndHash = window.location.search.replace(redirectRegex, '') + window.location.hash;
-    
-    console.log("Redirection SPA - URL d'origine:", window.location.href);
-    console.log("Redirection vers:", '/' + pathname + searchAndHash);
-    
-    window.history.replaceState(null, '', 
-      '/' + pathname + searchAndHash
-    );
   }
   
   // Gestion des URL canoniques pour SEO
