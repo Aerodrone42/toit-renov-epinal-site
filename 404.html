@@ -8,31 +8,33 @@
   <meta name="robots" content="noindex">
   
   <script type="text/javascript">
-    // Script de redirection amélioré pour SPA
+    // Script de redirection amélioré avec support GitHub Pages
     (function() {
+      var segmentCount = 0; // Pour GitHub Pages avec domaine personnalisé
       var l = window.location;
+      
+      // Pour GitHub Pages
+      if (l.hostname.includes('github.io')) {
+        segmentCount = 1; // Pour les sites GitHub Pages sans domaine personnalisé
+      }
       
       // Log pour débogage
       console.log("404.html - URL demandée:", l.pathname);
       
-      // Supprime les éventuels double slashes
-      var cleanPath = l.pathname.replace(/\/+/g, '/');
+      // Méthode de redirection spéciale pour GitHub Pages
+      var pathSegments = l.pathname.split('/');
+      var cleanPath = pathSegments
+        .slice(segmentCount)
+        .join('/');
       
-      // Ne pas rediriger les ressources statiques (images, JS, etc.)
+      // Ne pas rediriger les ressources statiques
       if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(cleanPath)) {
         console.log("Ressource statique détectée, pas de redirection");
         return;
       }
       
-      // Traitement spécial pour les chemins de services et zones
-      if (cleanPath.includes('/services/') || cleanPath.includes('/zones/')) {
-        // Garder le chemin tel quel - important pour les URLs spécifiques
-        console.log("URL de service ou zone détectée:", cleanPath);
-      }
-      
-      // Construire l'URL de redirection
-      var redirectUrl = l.origin + '/#' + cleanPath;
-      
+      // Redirection vers la page d'index avec le chemin demandé en hash
+      var redirectUrl = l.origin + '/#' + cleanPath + (l.search || '') + (l.hash || '');
       console.log("Redirection vers:", redirectUrl);
       window.location.replace(redirectUrl);
     })();
@@ -123,19 +125,5 @@
     
     <p class="error-code">Code d'erreur: 404 - Page non trouvée</p>
   </div>
-  
-  <!-- Script additionnel pour envoyer les données d'erreur -->
-  <script>
-    // Envoie des informations sur l'erreur 404 pour le monitoring
-    try {
-      var pageUrl = window.location.pathname;
-      var referrer = document.referrer;
-      console.log("Détails erreur 404 - URL:", pageUrl, "Référent:", referrer);
-      
-      // On pourrait ajouter ici un appel à un service de monitoring
-    } catch(e) {
-      console.error("Erreur lors de l'envoi des données:", e);
-    }
-  </script>
 </body>
 </html>
