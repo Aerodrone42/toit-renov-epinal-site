@@ -7,9 +7,7 @@
   <script type="text/javascript">
     // Single Page Apps for GitHub Pages
     // MIT Licensed: https://github.com/rafgraph/spa-github-pages
-    // This script takes the current URL and converts the path and query
-    // string into just a query string, and then redirects the browser
-    // to the new URL with only a query string and hash fragment.
+    // Cette fonction prend l'URL actuelle et la transforme pour qu'elle fonctionne avec React Router
     var pathSegmentsToKeep = 0;
 
     var l = window.location;
@@ -21,8 +19,30 @@
       l.hash
     );
   </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #3b82f6;
+    }
+  </style>
 </head>
 <body>
-  Redirection en cours...
+  <div class="container">
+    <h1>Redirection en cours...</h1>
+    <p>Vous allez être redirigé vers la page demandée. Si la redirection ne fonctionne pas, <a href="/">cliquez ici pour retourner à l'accueil</a>.</p>
+  </div>
 </body>
 </html>

@@ -83,129 +83,129 @@
     <priority>0.8</priority>
   </url>
   
-  <!-- Pages de villes -->
+  <!-- Pages de villes - Correction des URLs zones -> zones -->
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/epinal</loc>
+    <loc>https://renovationtechnitoit.fr/zones/epinal</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/golbey</loc>
+    <loc>https://renovationtechnitoit.fr/zones/golbey</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/thaon-les-vosges</loc>
+    <loc>https://renovationtechnitoit.fr/zones/thaon-les-vosges</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/gerardmer</loc>
+    <loc>https://renovationtechnitoit.fr/zones/gerardmer</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/la-bresse</loc>
+    <loc>https://renovationtechnitoit.fr/zones/la-bresse</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/remiremont</loc>
+    <loc>https://renovationtechnitoit.fr/zones/remiremont</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/saint-die-des-vosges</loc>
+    <loc>https://renovationtechnitoit.fr/zones/saint-die-des-vosges</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/mirecourt</loc>
+    <loc>https://renovationtechnitoit.fr/zones/mirecourt</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/vittel</loc>
+    <loc>https://renovationtechnitoit.fr/zones/vittel</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/neufchateau</loc>
+    <loc>https://renovationtechnitoit.fr/zones/neufchateau</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/charmes</loc>
+    <loc>https://renovationtechnitoit.fr/zones/charmes</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/rambervillers</loc>
+    <loc>https://renovationtechnitoit.fr/zones/rambervillers</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/raon-l-etape</loc>
+    <loc>https://renovationtechnitoit.fr/zones/raon-letape</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/dompaire</loc>
+    <loc>https://renovationtechnitoit.fr/zones/dompaire</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/bruyeres</loc>
+    <loc>https://renovationtechnitoit.fr/zones/bruyeres</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/le-val-d-ajol</loc>
+    <loc>https://renovationtechnitoit.fr/zones/le-val-dajol</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/xertigny</loc>
+    <loc>https://renovationtechnitoit.fr/zones/xertigny</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/vagney</loc>
+    <loc>https://renovationtechnitoit.fr/zones/vagney</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/uxegney</loc>
+    <loc>https://renovationtechnitoit.fr/zones/uxegney</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/saint-etienne-les-remiremont</loc>
+    <loc>https://renovationtechnitoit.fr/zones/saint-etienne-les-remiremont</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/villes/chantraine</loc>
+    <loc>https://renovationtechnitoit.fr/zones/chantraine</loc>
     <lastmod>2025-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -225,4 +225,3 @@
     <priority>0.5</priority>
   </url>
 </urlset>
-
