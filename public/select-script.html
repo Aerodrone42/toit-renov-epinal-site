@@ -1,0 +1,58 @@
+
+<!--
+Instructions pour éliminer le "#" dans les URLs et améliorer le SEO:
+
+Pour assurer un routage correct et des URLs propres favorables au SEO pour les futurs sites, suivre ces étapes:
+
+1. REMPLACEMENT DU ROUTER: Remplacer HashRouter par BrowserRouter dans App.tsx.
+
+2. REDIRECTION GITHUB PAGES: Implémenter un script de redirection dans 404.html pour gérer correctement les URLs.
+   Exemple:
+   ```javascript
+   // Dans 404.html
+   var pathSegmentsToKeep = 0;
+   var l = window.location;
+   l.replace(
+     l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+     l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+     l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+     (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+     l.hash
+   );
+   ```
+
+3. SCRIPT MAIN.TSX: Ajouter un script dans main.tsx pour gérer les redirections et restaurer les chemins d'URL corrects.
+   Exemple:
+   ```javascript
+   // Dans main.tsx
+   (function() {
+     const redirectRegex = /\?\/([^&]*)/;
+     const match = window.location.search.match(redirectRegex);
+     
+     if (match && match.length > 1) {
+       const pathname = match[1];
+       const searchAndHash = window.location.search.replace(redirectRegex, '') + window.location.hash;
+       
+       window.history.replaceState(null, '', 
+         '/' + pathname + searchAndHash
+       );
+     }
+   })();
+   ```
+
+4. FICHIER _REDIRECTS: Créer un fichier _redirects (pour Netlify) pour rediriger toutes les requêtes vers index.html.
+   Contenu:
+   ```
+   /* /index.html 200
+   ```
+
+5. CONFIGURATION DE BASE PATH: Vérifier que la propriété 'base' dans vite.config.ts est définie à "/" pour assurer des chemins relatifs corrects.
+   ```javascript
+   // Dans vite.config.ts
+   base: "/", // Configuration pour domaine personnalisé (pas de sous-répertoire)
+   ```
+
+6. CONFIGURATION DES FICHIERS CNAME: S'assurer que les fichiers CNAME sont correctement placés pour les domaines personnalisés.
+
+Cette approche garantit des URLs propres et favorables au SEO, améliorant à la fois l'expérience utilisateur et l'optimisation pour les moteurs de recherche.
+-->
