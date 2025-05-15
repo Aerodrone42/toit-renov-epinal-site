@@ -8,7 +8,7 @@ const HeroBanner = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="relative bg-gray-900 h-[60vh] md:h-[70vh] flex items-center">
+    <div className="relative bg-gray-900 h-[70vh] md:h-[70vh] flex items-center">
       {/* Image background with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -23,15 +23,10 @@ const HeroBanner = () => {
       
       {/* Content */}
       <div className="container-custom relative z-20 text-white">
-        {/* Logo/Title with additional vertical spacing on mobile */}
-        <div className={`${isMobile ? 'pt-20' : ''}`}>
-          {/* Only show this banner title on mobile */}
-          {isMobile ? (
-            <h2 className="text-xl font-bold text-white mb-8 px-2 py-1 inline-block">
-              RÉNOVATION TECHNI TOIT
-            </h2>
-          ) : null}
-          
+        {/* Content wrapper with proper spacing */}
+        <div className={`${isMobile ? 'pt-28' : 'pt-0'}`}>
+          {/* Mobile title - completely removed to avoid overlap */}
+          {/* Only show the main heading and rest of content */}
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
               Expert en rénovation de toiture dans les Vosges
