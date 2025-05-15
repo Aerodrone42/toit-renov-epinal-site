@@ -8,7 +8,7 @@ const HeroBanner = () => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="relative bg-gray-900 flex items-center" style={{ height: isMobile ? '100vh' : '70vh' }}>
+    <div className="relative bg-gray-900 flex items-center" style={{ height: isMobile ? '100vh' : '80vh' }}>
       {/* Image background with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -24,7 +24,7 @@ const HeroBanner = () => {
       {/* Content */}
       <div className="container-custom relative z-20 text-white">
         {/* Content wrapper with significant top padding for mobile */}
-        <div className={`${isMobile ? 'pt-36' : 'pt-0'}`}>
+        <div className={`${isMobile ? 'pt-36' : 'pt-20'}`}>
           <div className="max-w-3xl">
             <h1 className={`${isMobile ? 'text-2xl' : 'text-3xl md:text-4xl lg:text-5xl'} font-bold mb-4 text-white`}>
               Expert en rénovation de toiture dans les Vosges

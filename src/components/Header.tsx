@@ -108,21 +108,21 @@ const Header = () => {
   return (
     <header className={headerClasses}>
       <div className="container-custom flex justify-between items-center">
-        {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-roofing-red' : 'text-white'}`}>
+        {/* Logo - Ajout d'une largeur maximale pour éviter le débordement */}
+        <Link to="/" className="flex items-center max-w-[180px] md:max-w-none">
+          <span className={`text-lg md:text-xl font-bold transition-colors ${isScrolled ? 'text-roofing-red' : 'text-white'}`}>
             RÉNOVATION TECHNI TOIT
           </span>
         </Link>
 
-        {/* Navigation - Desktop */}
+        {/* Navigation - Desktop - Ajusté pour éviter la superposition */}
         {!isMobile && (
           <NavigationMenu className="hidden md:flex">
-            <NavigationMenuList>
+            <NavigationMenuList className="space-x-1">
               <NavigationMenuItem>
                 <Link to="/">
                   <NavigationMenuLink className={cn(
-                    "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                    "group inline-flex h-10 w-max items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition-colors",
                     isScrolled ? 'text-gray-700 hover:text-roofing-red' : 'text-white hover:text-white/80',
                     location.pathname === "/" && "font-semibold text-roofing-red"
                   )}>
@@ -133,7 +133,7 @@ const Header = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className={cn(
-                  "bg-transparent",
+                  "bg-transparent px-3 py-2 text-sm",
                   isScrolled ? 'text-gray-700 hover:text-roofing-red data-[state=open]:text-roofing-red' : 'text-white hover:text-white/80 data-[state=open]:text-white',
                   location.pathname.includes("/services/") && "font-semibold text-roofing-red"
                 )}>
@@ -161,7 +161,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <Link to="/zones-intervention">
                   <NavigationMenuLink className={cn(
-                    "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                    "group inline-flex h-10 w-max items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition-colors",
                     isScrolled ? 'text-gray-700 hover:text-roofing-red' : 'text-white hover:text-white/80',
                     location.pathname === "/zones-intervention" && "font-semibold text-roofing-red"
                   )}>
@@ -173,7 +173,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <Link to="/contact">
                   <NavigationMenuLink className={cn(
-                    "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors",
+                    "group inline-flex h-10 w-max items-center justify-center rounded-md px-3 py-2 text-sm font-medium transition-colors",
                     isScrolled ? 'text-gray-700 hover:text-roofing-red' : 'text-white hover:text-white/80',
                     location.pathname === "/contact" && "font-semibold text-roofing-red"
                   )}>
