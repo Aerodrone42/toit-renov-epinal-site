@@ -31,7 +31,7 @@ const HeroBanner = () => {
             alt="Camion RÉNOVATION TECHNI TOIT" 
             className="w-full h-full object-cover object-center"
             loading="eager"
-            fetchpriority="high"
+            fetchPriority="high"
           />
         ) : (
           <div className="w-full h-full bg-gray-800"></div>
