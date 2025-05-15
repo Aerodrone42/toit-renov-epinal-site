@@ -1,6 +1,12 @@
 
-# Simple SPA redirect rule
+# Règles de redirection pour le site
+# Règle principale pour React Router
 /*  /index.html  200
 
-# Ensure lovable-uploads are properly served
+# Assurer que les ressources statiques sont correctement servies
 /lovable-uploads/*  /lovable-uploads/:splat  200
+
+# Redirections spécifiques pour les services principaux
+/services/renovation-toiture  /services/renovation-toiture/  301
+/services/demoussage-nettoyage-toiture  /services/demoussage-nettoyage-toiture/  301
+/services/ravalement-facade  /services/ravalement-facade/  301
