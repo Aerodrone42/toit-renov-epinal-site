@@ -1,11 +1,6 @@
 
-# Configuration de redirection optimisée pour Netlify
+# Simple SPA redirect rule
+/*  /index.html  200
 
-# Redirections SPA pour React Router
-/*      /index.html   200
-
-# Headers pour l'optimisation
-/static/*  Cache-Control: public, max-age=31536000, immutable
-/*.js      Cache-Control: public, max-age=31536000, immutable
-/*.css     Cache-Control: public, max-age=31536000, immutable
-/*.woff2   Cache-Control: public, max-age=31536000, immutable
+# Ensure lovable-uploads are properly served
+/lovable-uploads/*  /lovable-uploads/:splat  200

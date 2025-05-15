@@ -3,24 +3,13 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Redirection | RÉNOVATION TECHNI TOIT</title>
+  <title>Page non trouvée | RÉNOVATION TECHNI TOIT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   
   <script type="text/javascript">
-    // Script de redirection optimisé
-    (function() {
-      // Récupérer le chemin demandé
-      var path = window.location.pathname;
-      
-      // Ne pas rediriger les ressources statiques
-      if (/\.(jpg|jpeg|png|gif|svg|js|css|ico|txt|xml)$/i.test(path)) {
-        return;
-      }
-      
-      // Redirection directe vers la racine
-      window.location.replace(window.location.origin);
-    })();
+    // Simple redirect to homepage
+    window.location.href = "/";
   </script>
   
   <style>
@@ -48,64 +37,13 @@
       max-width: 200px;
       margin-bottom: 20px;
     }
-    .spinner {
-      margin: 20px auto;
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #3b82f6;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 0.5s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .buttons {
-      margin-top: 20px;
-    }
-    .button {
-      display: inline-block;
-      background-color: #3b82f6;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 4px;
-      text-decoration: none;
-      margin: 10px 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .button:hover {
-      background-color: #2563eb;
-    }
-    .button.outline {
-      background-color: transparent;
-      border: 2px solid #3b82f6;
-      color: #3b82f6;
-    }
-    .button.outline:hover {
-      background-color: #f0f7ff;
-    }
-    .error-code {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="/lovable-uploads/6405d24d-4938-452a-b21b-43c782556b25.png" alt="RÉNOVATION TECHNI TOIT" class="logo">
     <h1>Redirection en cours...</h1>
-    <div class="spinner"></div>
     <p>Nous vous redirigeons vers la page d'accueil.</p>
-    
-    <div class="buttons">
-      <a href="/" class="button">Accueil</a>
-      <a href="javascript:history.back()" class="button outline">Page précédente</a>
-    </div>
-    
-    <p class="error-code">Code d'erreur: 404 - Page non trouvée</p>
   </div>
 </body>
 </html>
