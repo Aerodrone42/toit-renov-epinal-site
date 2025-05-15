@@ -9,7 +9,7 @@ const HeroBanner = () => {
   
   return (
     <div className="relative bg-gray-900 h-[60vh] md:h-[70vh] flex items-center">
-      {/* Image background avec overlay */}
+      {/* Image background with overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img 
@@ -17,14 +17,15 @@ const HeroBanner = () => {
           alt="Camion RÉNOVATION TECHNI TOIT" 
           className="w-full h-full object-cover object-center"
           loading="eager"
-          fetchPriority="high"
+          fetchpriority="high"
         />
       </div>
       
-      {/* Contenu */}
+      {/* Content */}
       <div className="container-custom relative z-20 text-white">
-        {/* Logo/Titre avec espace vertical supplémentaire sur mobile */}
-        <div className={`${isMobile ? 'pt-16' : ''}`}>
+        {/* Logo/Title with additional vertical spacing on mobile */}
+        <div className={`${isMobile ? 'pt-20' : ''}`}>
+          {/* Only show this banner title on mobile */}
           {isMobile ? (
             <h2 className="text-xl font-bold text-white mb-8 px-2 py-1 inline-block">
               RÉNOVATION TECHNI TOIT
@@ -49,7 +50,7 @@ const HeroBanner = () => {
               </Link>
             </div>
             
-            {/* Points clés */}
+            {/* Key points */}
             <div className="mt-6">
               <div className="flex flex-col space-y-3">
                 <div className="flex items-center">
@@ -73,7 +74,7 @@ const HeroBanner = () => {
               </div>
             </div>
             
-            {/* Badge assurance */}
+            {/* Insurance badge */}
             <div className="mt-6 md:mt-8 inline-block bg-black/50 backdrop-blur-sm px-3 py-2 rounded-md">
               <p className="flex items-center text-white text-sm md:text-base font-medium">
                 <span className="bg-roofing-red p-1 rounded-full mr-2 flex items-center justify-center">
