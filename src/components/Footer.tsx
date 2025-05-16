@@ -125,9 +125,22 @@ const Footer = () => {
           </Link>
         </div>
         
-        {/* Copyright */}
+        {/* Copyright avec le texte ajouté pour Aerodrone Multiservices */}
         <div className="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} RÉNOVATION TECHNI TOIT - Tous droits réservés</p>
+          <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-2">
+            <p>© {new Date().getFullYear()} RÉNOVATION TECHNI TOIT - Tous droits réservés</p>
+            <p>
+              <span>site créé par </span>
+              <a 
+                href="https://www.site-internet-sans-abonnement.fr/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-roofing-red hover:text-roofing-red/80 transition-colors"
+              >
+                aerodrone multiservices
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
