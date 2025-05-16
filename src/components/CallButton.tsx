@@ -26,7 +26,7 @@ const CallButton = () => {
     <a 
       href="tel:0602327557" 
       className={cn(
-        "fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-roofing-red text-white px-4 py-3 rounded-full shadow-lg transition-all duration-300 hover:bg-roofing-red/90 group",
+        "fixed bottom-20 md:bottom-6 right-6 z-50 flex items-center gap-2 bg-roofing-red text-white px-4 py-3 rounded-full shadow-lg transition-all duration-300 hover:bg-roofing-red/90 group",
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0 pointer-events-none"
       )}
       aria-label="Appelez-nous au 06 02 32 75 57"
