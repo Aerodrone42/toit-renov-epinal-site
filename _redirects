@@ -1,12 +1,20 @@
 
 # Règles de redirection pour le site
-# Règle principale pour React Router
+
+# Règle principale pour React Router - doit être en dernier
 /*  /index.html  200
 
 # Assurer que les ressources statiques sont correctement servies
 /lovable-uploads/*  /lovable-uploads/:splat  200
+/static/*  /static/:splat  200
+/assets/*  /assets/:splat  200
 
-# Redirections spécifiques pour les services principaux
-/services/renovation-toiture  /services/renovation-toiture/  301
-/services/demoussage-nettoyage-toiture  /services/demoussage-nettoyage-toiture/  301
-/services/ravalement-facade  /services/ravalement-facade/  301
+# Fichiers système
+/robots.txt  /robots.txt  200
+/sitemap.xml  /sitemap.xml  200
+/.well-known/*  /.well-known/:splat  200
+
+# Redirections spécifiques pour les services principaux (optionnel)
+/services/renovation-toiture/  /services/renovation-toiture  301
+/services/demoussage-nettoyage-toiture/  /services/demoussage-nettoyage-toiture  301
+/services/ravalement-facade/  /services/ravalement-facade  301

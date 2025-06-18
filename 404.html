@@ -3,13 +3,24 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Page non trouvée | RÉNOVATION TECHNI TOIT</title>
+  <title>Redirection | RÉNOVATION TECHNI TOIT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   
-  <!-- Redirection instantanée vers la page d'accueil -->
   <script>
-    window.location.replace("/");
+    // Redirection pour GitHub Pages avec React Router
+    var pathSegmentsToKeep = 0;
+    var l = window.location;
+    
+    // Redirection instantanée vers la page d'accueil pour les vraies 404
+    // mais conservation du chemin pour React Router
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
   </script>
   
   <style>
@@ -43,7 +54,7 @@
   <div class="container">
     <img src="/lovable-uploads/6405d24d-4938-452a-b21b-43c782556b25.png" alt="RÉNOVATION TECHNI TOIT" class="logo">
     <h1>Redirection en cours...</h1>
-    <p>Nous vous redirigeons vers la page d'accueil.</p>
+    <p>Nous vous redirigeons vers la page demandée.</p>
   </div>
 </body>
 </html>
