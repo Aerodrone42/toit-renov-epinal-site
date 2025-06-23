@@ -8,19 +8,22 @@
   <meta name="robots" content="noindex">
   
   <script>
-    // Redirection pour GitHub Pages avec React Router
+    // Script de redirection amélioré pour GitHub Pages avec React Router
     var pathSegmentsToKeep = 0;
     var l = window.location;
     
-    // Redirection instantanée vers la page d'accueil pour les vraies 404
-    // mais conservation du chemin pour React Router
-    l.replace(
-      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+    // Construire l'URL de redirection proprement
+    var redirect = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
       l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
       l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
       (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-      l.hash
-    );
+      l.hash;
+    
+    // Stocker dans sessionStorage pour récupération par main.tsx
+    sessionStorage.redirect = l.href;
+    
+    // Redirection immédiate
+    l.replace(redirect);
   </script>
   
   <style>

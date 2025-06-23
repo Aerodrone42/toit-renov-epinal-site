@@ -12,7 +12,7 @@ import './index.css'
   }
 })();
 
-// Gestion des paramètres de redirection GitHub Pages
+// Gestion améliorée des paramètres de redirection GitHub Pages
 (function() {
   var l = window.location;
   if (l.search) {
@@ -28,6 +28,21 @@ import './index.css'
         l.hash
       );
     }
+  }
+})();
+
+// Gestion spécifique pour les redirections avec ?/
+(function() {
+  const redirectRegex = /\?\/([^&]*)/;
+  const match = window.location.search.match(redirectRegex);
+  
+  if (match && match.length > 1) {
+    const pathname = match[1];
+    const searchAndHash = window.location.search.replace(redirectRegex, '') + window.location.hash;
+    
+    window.history.replaceState(null, '', 
+      '/' + pathname + searchAndHash
+    );
   }
 })();
 
