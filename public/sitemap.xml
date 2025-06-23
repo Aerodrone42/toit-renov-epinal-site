@@ -1,9 +1,10 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Page d'accueil -->
   <url>
     <loc>https://renovationtechnitoit.fr/</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,19 +12,19 @@
   <!-- Pages principales -->
   <url>
     <loc>https://renovationtechnitoit.fr/contact</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones-intervention</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/realisations</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -31,55 +32,55 @@
   <!-- Services -->
   <url>
     <loc>https://renovationtechnitoit.fr/services/renovation-toiture</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/demoussage-nettoyage-toiture</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/ravalement-facade</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/peinture-boiserie</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/changement-toiture</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/nettoyage-cheneau</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/reparations-diverses</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/charpente</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/services/dessous-de-toit</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -87,127 +88,127 @@
   <!-- Zones d'intervention -->
   <url>
     <loc>https://renovationtechnitoit.fr/zones/epinal</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/thaon-les-vosges</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/remiremont</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/mirecourt</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/saint-die-des-vosges</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/charmes</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/golbey</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/gerardmer</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/saint-etienne-les-remiremont</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/le-val-dajol</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/neufchateau</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/vittel</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/dompaire</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/rambervillers</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://renovationtechnitoit.fr/zones/raon-letape</loc>
-    <lastmod>2025-06-18</lastmod>
+    <loc>https://renovationtechnitoit.fr/zones/raon-l-etape</loc>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/bruyeres</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/la-bresse</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/xertigny</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/chantraine</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/uxegney</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/zones/vagney</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -215,13 +216,13 @@
   <!-- Pages légales -->
   <url>
     <loc>https://renovationtechnitoit.fr/mentions-legales</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://renovationtechnitoit.fr/politique-confidentialite</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
